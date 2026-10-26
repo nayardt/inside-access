@@ -1,0 +1,21 @@
+{
+  "execution": "GitHub Actions; hosted Node 24 Linux runner; disposable test databases",
+  "run_id": 40345550572,
+  "run_url": "https://github.com/nayardt/inside-access/actions/runs/40345550572",
+  "commit": "423f2e0262324779d81d17beb3122a77777ce373",
+  "status": "completed",
+  "conclusion": "success",
+  "tests_passed": 123,
+  "tests_failed": 0,
+  "suites_passed": 9,
+  "data_reconciliation": "PASS: 30 selected, 6 pending, 12 unsuitable, 22 sources; second import 0",
+  "production_build": "PASS",
+  "evidence_lines": [
+    "2026-10-26T15:04:15.2485530Z  Test Files  9 passed (9)",
+    "2026-10-26T15:04:15.2494762Z       Tests  123 passed (123)",
+    "2026-10-26T15:04:17.8215684Z   \"status\": \"PASS\",",
+    "2026-10-26T15:04:17.8216543Z   \"second_import\": 0,",
+    "2026-10-26T15:04:18.7606152Z ✓ built in 156ms"
+  ],
+  "completed_at": "2026-10-26T15:04:24Z"
+}
