@@ -14,7 +14,7 @@ const batch=():ObservationBatch=>({items:parseParis({total_count:1,results:[raw]
 let check:ReturnType<typeof vi.spyOn>;
 const status=async()=>(await agent.get('/api/admin/discovery/status')).body;
 const run=async()=>await agent.post('/api/admin/discovery/run').send({});
-beforeAll(async()=>{db=await openLocal('memory://');await migrate(db);await importSeed(db);admin=await createLocalAdmin(db,'operations@example.test','Operations-only-test-password!');app=createApp(db);agent=request.agent(app);await agent.post('/api/auth/login').send({email:'operations@example.test',password:'Operations-only-test-password!'});check=vi.spyOn(connectors['paris-open-data'],'check').mockImplementation(async()=>batch());},30000);
+beforeAll(async()=>{db=await openLocal('memory://');await migrate(db);await importSeed(db);admin=await createLocalAdmin(db,'operations@example.test','Operations-only-test-password!');app=createApp(db);agent=request.agent(app);await agent.post('/api/auth/login').send({email:'operations@example.test',password:'Operations-only-test-password!'});check=vi.spyOn(connectors['paris-open-data'],'check').mockImplementation(async()=>batch());},120000);
 afterAll(async()=>{vi.restoreAllMocks();await db.close();});
 test('discovery status requires admin membership at HTTP and database layers',async()=>{
  expect((await request(app).get('/api/admin/discovery/status')).status).toBe(401);

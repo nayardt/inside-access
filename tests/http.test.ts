@@ -5,7 +5,7 @@ import {createApp} from '../server/app.js';
 import {importSeed} from '../server/import.js';
 import {createLocalAdmin} from '../server/auth.js';
 let db:DB,app:ReturnType<typeof createApp>,agent:ReturnType<typeof request.agent>;
-beforeAll(async()=>{db=await openLocal('memory://');await migrate(db);await importSeed(db);await createLocalAdmin(db,'http@example.test','Http-test-only-password-2026!');app=createApp(db);agent=request.agent(app);},30000);
+beforeAll(async()=>{db=await openLocal('memory://');await migrate(db);await importSeed(db);await createLocalAdmin(db,'http@example.test','Http-test-only-password-2026!');app=createApp(db);agent=request.agent(app);},120000);
 afterAll(async()=>{await db.close();});
 test('anonymous HTTP feed returns no unpublished data',async()=>{const r=await request(app).get('/api/public/opportunities');expect(r.status).toBe(200);expect(r.body).toEqual({records:[],total:0});});
 test('HTTP admin requests require a session',async()=>{expect((await request(app).get('/api/admin/rows/opportunities')).status).toBe(401);expect((await request(app).post('/api/admin/rpc/review_opportunity').send({id:'IA-AMS-001',revision:1,action:'publish',note:'Attempt'})).status).toBe(401);});

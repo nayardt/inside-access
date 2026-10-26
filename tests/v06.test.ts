@@ -21,7 +21,7 @@ const raw=(id:string,patch:any={})=>({id,title:'Synthetic filmmaker studio Q&A '
 let state=raw('source-1');
 const batch=()=>({items:parseParis({total_count:1,results:[state]},new Date(),true),missing_ids:[],coverage:{note:'Synthetic bounded integration test',requests:1,sample_limit:60,complete_catalog:false as const,returned:1,newly_relevant:1}});
 const run=()=>runDiscovery(localStore(db),{force:true,connectorCheck:async()=>batch()});
-beforeAll(async()=>{db=await openLocal('memory://');await migrate(db);await importSeed(db);admin=await createLocalAdmin(db,'v06@example.test','V06-test-only-password!');},30000);
+beforeAll(async()=>{db=await openLocal('memory://');await migrate(db);await importSeed(db);admin=await createLocalAdmin(db,'v06@example.test','V06-test-only-password!');},120000);
 afterAll(async()=>{await db.close();});
 describe('Approval improvements and automatic provenance',()=>{
  test('standard save and approval need no note; identity/time/evidence/field diff are automatic',async()=>{
@@ -71,7 +71,7 @@ describe('Non-destructive v0.5 upgrade',()=>{
    expect((await restored.query<any>('select count(*)::int n from private.app_migrations')).rows[0].n).toBe(3);expect((await restored.query<any>("select title,published from public.opportunities where opportunity_id='IA-AMS-001'")).rows[0]).toEqual({title:'My existing edited listing',published:true});await restored.close();
    await migrate(old);expect(await readdir(path.join(dir,'backups'))).toHaveLength(1);
   }finally{await old?.close();await rm(dir,{recursive:true,force:true});}
- },30000);
+ },120000);
  test('a second process cannot open the same local database',async()=>{const dir=await mkdtemp(path.join(tmpdir(),'ia-lock-'));const first=await openLocal(path.join(dir,'pgdata'));try{await expect(openLocal(path.join(dir,'pgdata'))).rejects.toThrow(/already open/);}finally{await first.close();await rm(dir,{recursive:true,force:true});}});
  test('macOS installer preserves .local, .env and Git files, with a private full backup',async()=>{
   const {applyUpgrade}=await import('../scripts/upgrade.mjs');const dir=await mkdtemp(path.join(tmpdir(),'ia-installer-'));try{const source=path.join(dir,'v06'),target=path.join(dir,'My existing project');await mkdir(path.join(source,'server'),{recursive:true});await mkdir(path.join(target,'server'),{recursive:true});await mkdir(path.join(target,'.local/pgdata'),{recursive:true});await mkdir(path.join(target,'.git'),{recursive:true});

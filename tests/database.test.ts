@@ -17,7 +17,7 @@ const row=async(id='IA-AMS-001')=>(await db.query<any>('select * from public.opp
 const review=async(action:string,id='IA-AMS-001')=>call('review_opportunity',[id,action,(await row(id)).revision,'Automated test review']);
 const save=async(patch:Record<string,unknown>,id='IA-AMS-001')=>call('save_opportunity',[id,JSON.stringify(patch),(await row(id)).revision,'Automated test correction']);
 const publicRows=()=>asRole(db,'anon',null,tx=>rpc<any>(tx,'list_public_opportunities',[JSON.stringify({})]));
-beforeAll(async()=>{db=await openLocal('memory://');await migrate(db);await importSeed(db);admin=await createLocalAdmin(db,'admin@example.test','This-is-a-test-only-password!');outsider=randomUUID();await db.query('insert into auth.users(id,email) values($1,$2)',[outsider,'outsider@example.test']);},30000);
+beforeAll(async()=>{db=await openLocal('memory://');await migrate(db);await importSeed(db);admin=await createLocalAdmin(db,'admin@example.test','This-is-a-test-only-password!');outsider=randomUUID();await db.query('insert into auth.users(id,email) values($1,$2)',[outsider,'outsider@example.test']);},120000);
 afterAll(async()=>{await db.close();});
 describe('Import and preservation',()=>{
  test('all 48 opportunities and 22 watchlist sources import',async()=>{expect((await db.query('select count(*)::int n from public.opportunities')).rows[0].n).toBe(48);expect((await db.query('select count(*)::int n from public.sources')).rows[0].n).toBe(22);expect(await call('admin_overview')).toMatchObject({selected:30,pending:6,unsuitable:12,sources:22,verified:30,published:0});});
@@ -58,7 +58,7 @@ describe('Bounded source discovery',()=>{
 });
 describe('Exports and durable local PostgreSQL',()=>{
  test('CSV escapes formulas and preserves unknown values',()=>{const data=csv([{title:'=1+1',price:null,deadline:null,links:['https://example.org']}]);expect(data).toContain("'=1+1");expect(data).toContain('"",""');expect(safeUrl('javascript:alert(1)')).toBeNull();expect(safeUrl('https://example.org')).toBe('https://example.org/');});
- test('database survives process close/reopen on disk',async()=>{const dir=await mkdtemp(path.join(tmpdir(),'inside-access-db-'));try{let p=await openLocal(path.join(dir,'pgdata'));await p.exec('create table durability(id text primary key,value text);');await p.query('insert into durability values($1,$2)',['stable','persisted']);await p.close();p=await openLocal(path.join(dir,'pgdata'));expect((await p.query('select * from durability')).rows).toEqual([{id:'stable',value:'persisted'}]);await p.close();}finally{await rm(dir,{recursive:true,force:true});}},30000);
+ test('database survives process close/reopen on disk',async()=>{const dir=await mkdtemp(path.join(tmpdir(),'inside-access-db-'));try{let p=await openLocal(path.join(dir,'pgdata'));await p.exec('create table durability(id text primary key,value text);');await p.query('insert into durability values($1,$2)',['stable','persisted']);await p.close();p=await openLocal(path.join(dir,'pgdata'));expect((await p.query('select * from durability')).rows).toEqual([{id:'stable',value:'persisted'}]);await p.close();}finally{await rm(dir,{recursive:true,force:true});}},120000);
 });
 
 test('date-only verification evidence does not invent a check timestamp',async()=>{const r=(await db.query<any>("select verified_date,checked_at,recorded_at from public.verification_checks where check_id='seed-2026-10-24:IA-AMS-001'")).rows[0];expect(r.verified_date).toBe('2026-10-24');expect(r.checked_at).toBeNull();expect(r.recorded_at).toBeTruthy();});

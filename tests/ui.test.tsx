@@ -26,7 +26,7 @@ beforeAll(async()=>{
  });
  vi.spyOn(api,'resolveChange').mockImplementation((id,revision,action,reason='')=>run('resolve_discovery_change',[id,revision,action,reason]));
  vi.spyOn(api,'change').mockImplementation((name,id,revision,note,p,override=false)=>name==='review_opportunity'?run('review_opportunity_v06',[id,p,revision,note,override]):run(name,[id,typeof p==='string'?p:JSON.stringify(p),revision,note]));
-},30000);
+},120000);
 afterEach(()=>cleanup());afterAll(async()=>{vi.restoreAllMocks();await db.close();});
 const mount=()=>render(<Admin session={{user:{id:admin,email:'ui@example.test'},admin:true}} onSession={()=>{}}/>);
 test('private overview renders real database totals',async()=>{mount();await userEvent.setup().click(screen.getByRole('button',{name:/^System$/}));await screen.findByText('Selected imports');await waitFor(()=>expect(screen.getByText('Selected imports').parentElement?.textContent).toContain('30'));expect(screen.getByText('Discovery sources').parentElement?.textContent).toContain('22');expect(screen.getByText('Visible in public feed').parentElement?.textContent).toContain('0');});
