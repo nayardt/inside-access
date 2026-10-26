@@ -1,0 +1,25 @@
+{
+  "checked_date": "2026-10-25",
+  "typescript": "PASS",
+  "local_production_build": "PASS",
+  "supabase_mode_build": "PASS using explicit nonsecret placeholders; no hosted network execution",
+  "supabase_bundle_warning": "504.04 kB JS minified: non-blocking default 500 kB chunk warning",
+  "npm_audit_vulnerabilities": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "workbook_reconciliation": {
+    "selected": 30,
+    "pending": 6,
+    "unsuitable": 12,
+    "sources": 22,
+    "seed_audit": 30,
+    "repeat_import": 0,
+    "prototype": "matches seed",
+    "public_visible": 0
+  }
+}

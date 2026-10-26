@@ -1,0 +1,40 @@
+{
+  "version": "0.6.0",
+  "existing_database_migrated": true,
+  "previous_migrations": [
+    "202610240001_core.sql",
+    "202610240002_admin.sql",
+    "202610240003_discovery.sql"
+  ],
+  "migrations": [
+    "202610240001_core.sql",
+    "202610240002_admin.sql",
+    "202610240003_discovery.sql",
+    "202610240004_review_workflow.sql",
+    "202610240005_discovery_engine.sql"
+  ],
+  "opportunity_counts": [
+    {
+      "origin_group": "pending",
+      "n": 6
+    },
+    {
+      "origin_group": "selected",
+      "n": 30
+    },
+    {
+      "origin_group": "unsuitable",
+      "n": 12
+    }
+  ],
+  "sources": 22,
+  "enabled_sources": 0,
+  "published": 0,
+  "public_feed": {
+    "total": 0,
+    "records": []
+  },
+  "reimport_inserted": 0,
+  "existing_fields_preserved": true,
+  "private_changes": 0
+}

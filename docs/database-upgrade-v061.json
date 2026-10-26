@@ -1,0 +1,60 @@
+{
+  "checked_at": "2026-10-25T11:15:18.505Z",
+  "existing_data_identical": true,
+  "opportunities": 48,
+  "sources": 22,
+  "audit_rows_preserved": 71,
+  "counts": [
+    {
+      "origin_group": "pending",
+      "count": 6
+    },
+    {
+      "origin_group": "selected",
+      "count": 30
+    },
+    {
+      "origin_group": "unsuitable",
+      "count": 12
+    }
+  ],
+  "public_rows": 0,
+  "migrations_before": [
+    {
+      "name": "202610240001_core.sql"
+    },
+    {
+      "name": "202610240002_admin.sql"
+    },
+    {
+      "name": "202610240003_discovery.sql"
+    },
+    {
+      "name": "202610240004_review_workflow.sql"
+    },
+    {
+      "name": "202610240005_discovery_engine.sql"
+    }
+  ],
+  "migrations_after": [
+    {
+      "name": "202610240001_core.sql"
+    },
+    {
+      "name": "202610240002_admin.sql"
+    },
+    {
+      "name": "202610240003_discovery.sql"
+    },
+    {
+      "name": "202610240004_review_workflow.sql"
+    },
+    {
+      "name": "202610240005_discovery_engine.sql"
+    },
+    {
+      "name": "202610250006_source_change_audit.sql"
+    }
+  ],
+  "enabled_sources": 0
+}

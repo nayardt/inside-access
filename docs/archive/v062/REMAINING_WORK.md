@@ -1,0 +1,13 @@
+# Remaining work after v0.6.2
+
+1. **Install on the existing Mac project.** The updater and migration/restore path passed automated tests, including paths with spaces and retained login/session/edit/publication data. Actual macOS execution was not available here. Follow the upgrade guide, then use the existing login.
+2. **Choose whether to enable local monitoring.** Only W-001 is connected. Record its one-time API/ODbL acknowledgement in the source editor, enable it and run a check. Review newly discovered items and conflicts; nothing is auto-verified or published.
+3. **Hosted credentials and private staging.** Supabase Auth/PostgREST, Cloudflare hosting and actual GitHub scheduled execution still need owner account setup/access. Their adapters build; live managed-service integration is not claimed. No public deployment was attempted.
+4. **Editorial recheck before publication.** Research rows retain their original snapshot and can expire naturally. Verify the actual occurrence, route, eligibility and current inventory language. Confidence warnings need an explicit reason; hard blockers require correcting/rechecking facts.
+5. **Broader discovery coverage.** The latest-40/rotating-20 proof can miss busy-period updates. Add a tested incremental cursor/backfill, deletion semantics, retention and further individually permitted Amsterdam/London sources before promising broad coverage. Near-duplicate semantic matching is not implemented.
+6. **Operational hardening before public launch.** Enforce hosted administrator MFA, configure recovery, test hosted backup restoration, establish ODbL attribution/reuse and retention policies, and monitor free-tier usage. Native Safari/iOS/Android testing remains; Chrome desktop/mobile viewport checks passed through isolated real-component fixtures.
+7. **Later product work.** User accounts/synced saves, opt-in email alerts and delivery auditing remain future integrations. No email addresses are collected for alerts and no real email sending is enabled.
+
+Completed in v0.6.1: dashboard dismissal with required reasons, pending-first source-change filtering, direct listing review, and enriched per-change audit context. No account-dependent work has been claimed as completed.
+
+Completed in v0.6.2: authenticated live API/manual HTTP proof (2 private candidates), dashboard activation/operational status/review queue, repeated-run deduplication, visible skipped connectors and per-source failure results. Owner Mac installation/source activation and cloud account/data migration remain outstanding; see the current QA report and scheduling guide.

@@ -1,0 +1,24 @@
+{
+  "checked_date": "2026-10-25",
+  "browser": "Chrome",
+  "transport": "dev-only synthetic; no database access",
+  "mobile": {
+    "outer_width": 375,
+    "viewport": 360,
+    "document_width": 360,
+    "table_viewport": 328,
+    "table_content": 780,
+    "review_width": 324.59375,
+    "textarea_width": 324.59375
+  },
+  "desktop": {
+    "viewport": 1200,
+    "document_width": 1200,
+    "table_viewport": 1150,
+    "table_content": 1150,
+    "review_width": 360
+  },
+  "dismissal_removed_from_pending": true,
+  "dismissed_filter_retained_reason": true,
+  "native_mac_or_mobile_device_tested": false
+}

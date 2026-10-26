@@ -1,0 +1,798 @@
+{
+  "version": "0.6.4",
+  "started_at": "2026-10-26T13:32:07.966Z",
+  "completed_at": "2026-10-26T13:32:34.198Z",
+  "execution": "Authenticated admin HTTP route with real public API retrieval; fresh disk-backed PostgreSQL, separate from the existing user database",
+  "source": {
+    "source_id": "W-001",
+    "name": "Ville de Paris / Que Faire à Paris",
+    "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+    "license": "ODbL 1.0",
+    "license_url": "https://opendatacommons.org/licenses/odbl/1-0/"
+  },
+  "first_live_run": {
+    "images": {
+      "checked": 2,
+      "suitable_records": 2,
+      "suitable_images": 2,
+      "approved": 0,
+      "requests": 3,
+      "cached": 1,
+      "reports": [
+        {
+          "opportunity_id": "DS-W-001-7b0f35850ef9b48e222320bf0f0453cc",
+          "title": "Hommage à Roland Dyens, guitariste, professeur, improvisateur, compositeur",
+          "source_urls": [
+            "https://www.paris.fr/evenements/hommage-a-roland-dyens-guitariste-professeur-improvisateur-compositeur-126521",
+            "https://www.helloasso.com/associations/roland-dyens-in-the-skai/evenements/hommage-a-roland-dyens-salle-cortot-paris"
+          ],
+          "checked_at": "2026-10-26T13:32:25.788Z",
+          "status": "found",
+          "images": [
+            {
+              "image_url": "https://cdn.paris.fr/qfapv4/2026/10/24/huge-58e5050cda9f0e5aee2fad375828e9f6.png",
+              "extraction_method": "official_api",
+              "source_title": "Hommage à Roland Dyens, guitariste, professeur, improvisateur, compositeur",
+              "alt_text": "Hommage à Roland Dyens, guitariste, professeur, improvisateur, compositeur",
+              "width": 1200,
+              "height": 750,
+              "attribution": "Cordes Savarez",
+              "license_url": null,
+              "image_expires_at": null,
+              "event_name": "Hommage à Roland Dyens, guitariste, professeur, improvisateur, compositeur",
+              "event_date": "2026-12-12",
+              "source_page": "https://www.paris.fr/evenements/hommage-a-roland-dyens-guitariste-professeur-improvisateur-compositeur-126521",
+              "mime_type": "image/png",
+              "retrieved_at": "2026-10-26T13:32:17.737Z",
+              "quality_status": "suitable",
+              "quality_flags": [],
+              "event_match_tokens": [
+                "hommage",
+                "roland",
+                "dyens",
+                "guitariste",
+                "professeur",
+                "improvisateur",
+                "compositeur"
+              ],
+              "evidence": {
+                "page_title": "Hommage à Roland Dyens, guitariste, professeur, improvisateur, compositeur",
+                "event_name": "Hommage à Roland Dyens, guitariste, professeur, improvisateur, compositeur",
+                "matched_title_tokens": [
+                  "hommage",
+                  "roland",
+                  "dyens",
+                  "guitariste",
+                  "professeur",
+                  "improvisateur",
+                  "compositeur"
+                ],
+                "metadata_method": "official_api",
+                "source_retrieved_at": "2026-10-26T13:32:17.737Z",
+                "image_expiry_claim": null,
+                "image_probe": {
+                  "width": 1200,
+                  "height": 750,
+                  "mime_type": "image/png",
+                  "header_fingerprint": "e5d7002b5198eb2803078623593e3d9509c4e9aa9c68066124801fe59ee24039",
+                  "etag": "\"d7b9e0efbfc929f0e07ed85dc490f028\"",
+                  "last_modified": "Fri, 23 Oct 2026 22:06:15 GMT",
+                  "retrieved_at": "2026-10-26T13:32:25.787Z",
+                  "bytes_read": 262144,
+                  "image_url": "https://cdn.paris.fr/qfapv4/2026/10/24/huge-58e5050cda9f0e5aee2fad375828e9f6.png"
+                },
+                "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+              }
+            }
+          ],
+          "pages": [],
+          "requests": 2,
+          "cached": 0,
+          "inserted": 1
+        },
+        {
+          "opportunity_id": "DS-W-001-984b9e46c335128bb0fb81ff1135c694",
+          "title": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+          "source_urls": [
+            "https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327"
+          ],
+          "checked_at": "2026-10-26T13:32:29.916Z",
+          "status": "found",
+          "images": [
+            {
+              "image_url": "https://cdn.paris.fr/qfapv4/2026/10/24/huge-27ad912a92e1edb994d37a5d2777f968.png",
+              "extraction_method": "official_api",
+              "source_title": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+              "alt_text": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+              "width": 1200,
+              "height": 750,
+              "attribution": "Périphérie / Corpus Film",
+              "license_url": null,
+              "image_expires_at": null,
+              "event_name": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+              "event_date": "2026-11-21",
+              "source_page": "https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327",
+              "mime_type": "image/png",
+              "retrieved_at": "2026-10-26T13:32:17.737Z",
+              "quality_status": "suitable",
+              "quality_flags": [],
+              "event_match_tokens": [
+                "mois",
+                "doc",
+                "souvent",
+                "hiver",
+                "mutine",
+                "projection",
+                "rencontre"
+              ],
+              "evidence": {
+                "page_title": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+                "event_name": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+                "matched_title_tokens": [
+                  "mois",
+                  "doc",
+                  "souvent",
+                  "hiver",
+                  "mutine",
+                  "projection",
+                  "rencontre"
+                ],
+                "metadata_method": "official_api",
+                "source_retrieved_at": "2026-10-26T13:32:17.737Z",
+                "image_expiry_claim": null,
+                "image_probe": {
+                  "width": 1200,
+                  "height": 750,
+                  "mime_type": "image/png",
+                  "header_fingerprint": "8f3ebd0724ac19cf0239f40ddd950c0f9de75ba6167b25b47d2355b5cd4ea42f",
+                  "etag": "\"7c8db68fd470c0266dd2a32b9497e59a\"",
+                  "last_modified": "Sat, 24 Oct 2026 14:10:54 GMT",
+                  "retrieved_at": "2026-10-26T13:32:29.914Z",
+                  "bytes_read": 262144,
+                  "image_url": "https://cdn.paris.fr/qfapv4/2026/10/24/huge-27ad912a92e1edb994d37a5d2777f968.png"
+                },
+                "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+              }
+            }
+          ],
+          "pages": [],
+          "requests": 1,
+          "cached": 1,
+          "inserted": 1
+        }
+      ]
+    },
+    "started_at": "2026-10-26T13:32:10.370Z",
+    "completed_at": "2026-10-26T13:32:29.920Z",
+    "maintenance": {
+      "closed": 0,
+      "expired": 2
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "a017897e-1864-4041-b8ba-d911ba9fffb2",
+        "status": "ok",
+        "changed": 0,
+        "created": 2,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+          "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+          "requests": 1,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ],
+    "summary": {
+      "checked": 1,
+      "successful": 1,
+      "failed": 0,
+      "skipped": 0,
+      "fetched": 40,
+      "created": 2,
+      "changed": 0
+    }
+  },
+  "captured_live_replay": {
+    "images": {
+      "checked": 0,
+      "suitable_records": 0,
+      "suitable_images": 0,
+      "approved": 0,
+      "requests": 0,
+      "cached": 0,
+      "reports": []
+    },
+    "started_at": "2026-10-26T13:32:29.925Z",
+    "completed_at": "2026-10-26T13:32:29.941Z",
+    "maintenance": {
+      "closed": 0,
+      "expired": 0
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "9118a351-e8c0-4523-b43a-2a0ad7bf76e6",
+        "status": "ok",
+        "changed": 0,
+        "created": 0,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "note": "Exact replay of captured live observations; no synthetic records or additional HTTP retrieval",
+          "requests": 0,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ],
+    "summary": {
+      "checked": 1,
+      "successful": 1,
+      "failed": 0,
+      "skipped": 0,
+      "fetched": 40,
+      "created": 0,
+      "changed": 0
+    }
+  },
+  "second_live_run": {
+    "images": {
+      "checked": 0,
+      "suitable_records": 0,
+      "suitable_images": 0,
+      "approved": 0,
+      "requests": 0,
+      "cached": 0,
+      "reports": []
+    },
+    "started_at": "2026-10-26T13:32:29.946Z",
+    "completed_at": "2026-10-26T13:32:34.153Z",
+    "maintenance": {
+      "closed": 0,
+      "expired": 0
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "eb10ea01-e4f7-4d66-881a-74788ba180ff",
+        "status": "ok",
+        "changed": 0,
+        "created": 0,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+          "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+          "requests": 2,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ],
+    "summary": {
+      "checked": 1,
+      "successful": 1,
+      "failed": 0,
+      "skipped": 0,
+      "fetched": 40,
+      "created": 0,
+      "changed": 0
+    }
+  },
+  "private_queue_total": 2,
+  "candidates": [
+    {
+      "opportunity_id": "DS-W-001-7b0f35850ef9b48e222320bf0f0453cc",
+      "title": "Hommage à Roland Dyens, guitariste, professeur, improvisateur, compositeur",
+      "source_record_id": "126521",
+      "source_url": "https://www.paris.fr/evenements/hommage-a-roland-dyens-guitariste-professeur-improvisateur-compositeur-126521",
+      "booking_url": "https://www.helloasso.com/associations/roland-dyens-in-the-skai/evenements/hommage-a-roland-dyens-salle-cortot-paris",
+      "event_start_date": "2026-12-12",
+      "event_end_date": "2026-12-12",
+      "discovered_at": "2026-10-26T13:32:17.776Z",
+      "source_updated_at": "2026-10-26T11:27:34.000Z",
+      "source_published_at": null,
+      "verification_status": "pending",
+      "approval_status": "pending",
+      "published": false,
+      "quality_flags": [
+        "conflicting_time"
+      ],
+      "evidence": {
+        "license": "ODbL 1.0",
+        "audience": "Public enfants, jeunes et adultes.",
+        "date_end": "2026-12-12T22:00:00+00:00",
+        "date_start": "2026-12-12T20:00:00+00:00",
+        "source_url": "https://www.paris.fr/evenements/hommage-a-roland-dyens-guitariste-professeur-improvisateur-compositeur-126521",
+        "access_type": "conseillée",
+        "price_detail": "De 20 à 30 euros. Gratuit pour les enfants de moins de 12 ans.",
+        "status_evidence": null,
+        "date_description": "Le samedi 12 décembre 2026 de 20h00 à 22h00",
+        "source_updated_at": "2026-10-26T11:27:34.000Z"
+      }
+    },
+    {
+      "opportunity_id": "DS-W-001-984b9e46c335128bb0fb81ff1135c694",
+      "title": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+      "source_record_id": "123327",
+      "source_url": "https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327",
+      "booking_url": null,
+      "event_start_date": "2026-11-21",
+      "event_end_date": "2026-11-21",
+      "discovered_at": "2026-10-26T13:32:17.776Z",
+      "source_updated_at": "2026-10-24T16:11:00.000Z",
+      "source_published_at": null,
+      "verification_status": "pending",
+      "approval_status": "pending",
+      "published": false,
+      "quality_flags": [
+        "conflicting_time",
+        "missing_access_instructions",
+        "missing_booking_route"
+      ],
+      "evidence": {
+        "license": "ODbL 1.0",
+        "audience": "Public jeunes et adultes.",
+        "date_end": "2026-11-21T20:00:00+00:00",
+        "date_start": "2026-11-21T17:00:00+00:00",
+        "source_url": "https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327",
+        "access_type": "non",
+        "price_detail": "gratuit",
+        "status_evidence": null,
+        "date_description": "Le samedi 21 novembre 2026 de 17h00 à 20h00",
+        "source_updated_at": "2026-10-24T16:11:00.000Z"
+      }
+    }
+  ],
+  "duplicate_id_groups": [],
+  "public_visible": 0,
+  "status": {
+    "sources": [
+      {
+        "enabled": true,
+        "revision": 8,
+        "source_id": "W-001",
+        "last_error": null,
+        "source_url": "https://parisdata.opendatasoft.com/explore/dataset/que-faire-a-paris-/api/",
+        "source_name": "Ville de Paris — Que Faire à Paris dataset",
+        "connector_key": "paris-open-data",
+        "coverage_note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+        "next_check_at": "2026-10-27T08:32:34.142-05:00",
+        "last_checked_at": "2026-10-26T08:32:34.142-05:00",
+        "last_success_at": "2026-10-26T08:32:34.142-05:00",
+        "legal_review_note": "Activation QA: documented Ville de Paris public API and ODbL source reviewed for private discovery; no original-organizer verification or publication.",
+        "legal_reviewed_at": "2026-10-26T08:32:07.966-05:00"
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-002",
+        "last_error": null,
+        "source_url": "https://whatson.bfi.org.uk/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=events",
+        "source_name": "BFI Southbank — Previews and events",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-003",
+        "last_error": null,
+        "source_url": "https://whatson.bfi.org.uk/imax/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=special-screenings-events",
+        "source_name": "BFI IMAX — Special screenings",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-004",
+        "last_error": null,
+        "source_url": "https://www.sroaudiences.com/shows.asp",
+        "source_name": "SRO Audiences — Current shows",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-005",
+        "last_error": null,
+        "source_url": "https://www.applausestore.com/home",
+        "source_name": "ApplauseStore — Show calendar and event pages",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-006",
+        "last_error": null,
+        "source_url": "https://bluecirclecasting.nl/aankomende-oproepen",
+        "source_name": "Blue Circle Casting — Upcoming calls",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-007",
+        "last_error": null,
+        "source_url": "https://www.castingcollective.co.uk/artiste/casting-calls",
+        "source_name": "Casting Collective — Specific casting calls",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-008",
+        "last_error": null,
+        "source_url": "https://www.legrandrex.com/mobile/prochainement.php",
+        "source_name": "Le Grand Rex — Upcoming and special screenings",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-009",
+        "last_error": null,
+        "source_url": "https://eva.avrotros.nl/pagina/bijwonen-2",
+        "source_name": "Eva / AVROTROS — Audience tickets",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-010",
+        "last_error": null,
+        "source_url": "https://festival.idfa.nl/en/",
+        "source_name": "IDFA — Festival programme and practical ticket information",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-011",
+        "last_error": null,
+        "source_url": "https://www.imaginefilmfestival.nl/haal-nu-je-kaartjes-voor-imagine-2026/",
+        "source_name": "Imagine Fantastic Film Festival — Programme",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-012",
+        "last_error": null,
+        "source_url": "https://www.fhcm.paris/en/paris-fashion-week",
+        "source_name": "FHCM — Paris Fashion Week calendar",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-013",
+        "last_error": null,
+        "source_url": "https://haussmann.galerieslafayette.com/en/events/original-fashion-shows/",
+        "source_name": "Galeries Lafayette — Original Fashion Shows",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-014",
+        "last_error": null,
+        "source_url": "https://www.nona-source.com/",
+        "source_name": "Nona Source — Brand event announcements",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-015",
+        "last_error": null,
+        "source_url": "https://www.somersethouse.org.uk/whats-on/skate-lates-26-27",
+        "source_name": "Somerset House — What’s On",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-016",
+        "last_error": null,
+        "source_url": "https://emissions-tv.com/agenda",
+        "source_name": "Cassandra — Television recording calendar",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-017",
+        "last_error": null,
+        "source_url": "https://idille-emissions.tv/",
+        "source_name": "Idille Émissions",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-018",
+        "last_error": null,
+        "source_url": "https://public-emission.com/faq",
+        "source_name": "Casting Events — Public Émission",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-019",
+        "last_error": null,
+        "source_url": "https://filmcastings.nl/nl-nl/figuranten",
+        "source_name": "Filmcastings.nl — Background listings",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-020",
+        "last_error": null,
+        "source_url": "https://www.castingcollective.co.uk/artiste",
+        "source_name": "Casting Collective — General registration",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-021",
+        "last_error": null,
+        "source_url": "https://www.applausestore.com/book-2027-ee-bafta-film-awards-red-carpet",
+        "source_name": "2027 EE BAFTA Film Awards — fan-pen interest page",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-022",
+        "last_error": null,
+        "source_url": "https://whatson.bfi.org.uk/lff/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=red-carpet-viewing-access",
+        "source_name": "BFI London Film Festival — Future red-carpet arrangements",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      }
+    ],
+    "last_run": {
+      "error": null,
+      "run_id": "eb10ea01-e4f7-4d66-881a-74788ba180ff",
+      "status": "unchanged",
+      "coverage": {
+        "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+        "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+        "requests": 2,
+        "returned": 40,
+        "duplicates": 0,
+        "missing_ids": [],
+        "retrieved_at": "2026-10-26T13:32:34.141Z",
+        "sample_limit": 60,
+        "connector_key": "paris-open-data",
+        "newly_relevant": 2,
+        "complete_catalog": false
+      },
+      "new_count": 0,
+      "source_id": "W-001",
+      "started_at": "2026-10-26T08:32:29.947-05:00",
+      "completed_at": "2026-10-26T08:32:34.142-05:00",
+      "changed_count": 0,
+      "fetched_count": 40
+    },
+    "ready_sources": 1,
+    "failed_sources": 0,
+    "enabled_sources": 1,
+    "last_success_at": "2026-10-26T08:32:34.142-05:00",
+    "pending_candidates": 2
+  },
+  "runs": [
+    {
+      "run_id": "eb10ea01-e4f7-4d66-881a-74788ba180ff",
+      "source_id": "W-001",
+      "started_at": "2026-10-26T13:32:29.947Z",
+      "completed_at": "2026-10-26T13:32:34.142Z",
+      "status": "unchanged",
+      "fetched_count": 40,
+      "new_count": 0,
+      "changed_count": 0,
+      "error": null,
+      "coverage": {
+        "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+        "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+        "requests": 2,
+        "returned": 40,
+        "duplicates": 0,
+        "missing_ids": [],
+        "retrieved_at": "2026-10-26T13:32:34.141Z",
+        "sample_limit": 60,
+        "connector_key": "paris-open-data",
+        "newly_relevant": 2,
+        "complete_catalog": false
+      }
+    },
+    {
+      "run_id": "9118a351-e8c0-4523-b43a-2a0ad7bf76e6",
+      "source_id": "W-001",
+      "started_at": "2026-10-26T13:32:29.927Z",
+      "completed_at": "2026-10-26T13:32:29.930Z",
+      "status": "unchanged",
+      "fetched_count": 40,
+      "new_count": 0,
+      "changed_count": 0,
+      "error": null,
+      "coverage": {
+        "note": "Exact replay of captured live observations; no synthetic records or additional HTTP retrieval",
+        "requests": 0,
+        "returned": 40,
+        "duplicates": 0,
+        "missing_ids": [],
+        "retrieved_at": "2026-10-26T13:32:29.930Z",
+        "sample_limit": 60,
+        "connector_key": "paris-open-data",
+        "newly_relevant": 2,
+        "complete_catalog": false
+      }
+    },
+    {
+      "run_id": "a017897e-1864-4041-b8ba-d911ba9fffb2",
+      "source_id": "W-001",
+      "started_at": "2026-10-26T13:32:10.385Z",
+      "completed_at": "2026-10-26T13:32:17.776Z",
+      "status": "ok",
+      "fetched_count": 40,
+      "new_count": 2,
+      "changed_count": 0,
+      "error": null,
+      "coverage": {
+        "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+        "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+        "requests": 1,
+        "returned": 40,
+        "duplicates": 0,
+        "missing_ids": [],
+        "retrieved_at": "2026-10-26T13:32:17.775Z",
+        "sample_limit": 60,
+        "connector_key": "paris-open-data",
+        "newly_relevant": 2,
+        "complete_catalog": false
+      }
+    }
+  ],
+  "existing_database_writes": 0,
+  "paid_services_activated": false,
+  "cloud_schedule_activated": false
+}

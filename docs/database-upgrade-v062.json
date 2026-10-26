@@ -1,0 +1,55 @@
+{
+  "checked_at": "2026-10-25T12:11:50.284Z",
+  "restored_v061_backup_compared": true,
+  "all_existing_rows_identical": true,
+  "rows": {
+    "opportunities": 48,
+    "sources": 22,
+    "audit_history": 71
+  },
+  "migrations_before": [
+    {
+      "name": "202610240001_core.sql"
+    },
+    {
+      "name": "202610240002_admin.sql"
+    },
+    {
+      "name": "202610240003_discovery.sql"
+    },
+    {
+      "name": "202610240004_review_workflow.sql"
+    },
+    {
+      "name": "202610240005_discovery_engine.sql"
+    },
+    {
+      "name": "202610250006_source_change_audit.sql"
+    }
+  ],
+  "migrations_after": [
+    {
+      "name": "202610240001_core.sql"
+    },
+    {
+      "name": "202610240002_admin.sql"
+    },
+    {
+      "name": "202610240003_discovery.sql"
+    },
+    {
+      "name": "202610240004_review_workflow.sql"
+    },
+    {
+      "name": "202610240005_discovery_engine.sql"
+    },
+    {
+      "name": "202610250006_source_change_audit.sql"
+    },
+    {
+      "name": "202610250007_discovery_status.sql"
+    }
+  ],
+  "public_visible": 0,
+  "source_settings": "Unchanged in main database; activation performed through real admin endpoint in separate persisted proof database"
+}

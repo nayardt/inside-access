@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-26T13:32:24.701Z",
+  "restored_copy_only": true,
+  "migrations_added": 0,
+  "seed_inserted": 0,
+  "image_inserted": 0,
+  "all_tables_identical": true,
+  "tables": {
+    "auth.users": 0,
+    "local_auth.credentials": 0,
+    "local_auth.sessions": 0,
+    "private.admins": 0,
+    "private.app_migrations": 8,
+    "private.import_batches": 1,
+    "public.audit_history": 507,
+    "public.discovery_changes": 0,
+    "public.discovery_runs": 0,
+    "public.image_enrichment_checks": 30,
+    "public.image_fetch_cache": 157,
+    "public.opportunities": 48,
+    "public.opportunity_images": 231,
+    "public.source_snapshots": 0,
+    "public.sources": 22,
+    "public.verification_checks": 48
+  },
+  "groups": [
+    {
+      "origin_group": "pending",
+      "n": 6
+    },
+    {
+      "origin_group": "selected",
+      "n": 30
+    },
+    {
+      "origin_group": "unsuitable",
+      "n": 12
+    }
+  ],
+  "publications": [
+    {
+      "n": 0
+    }
+  ]
+}

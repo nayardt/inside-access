@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-10-25T13:28:42.199Z",
+  "checked": 30,
+  "suitable_records": 15,
+  "suitable_images": 20,
+  "approved": 0,
+  "requests": 4,
+  "cached": 160,
+  "rows_stored_or_refreshed": 0,
+  "image_rows_before": 231,
+  "image_rows_after": 231,
+  "duplicate_groups": 0,
+  "opportunity_rows_unchanged": true,
+  "source_rows_unchanged": true,
+  "public_visible": 0
+}

@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-25T13:28:57.349Z",
+  "first": {
+    "inserted": 226,
+    "skipped": 0
+  },
+  "second": {
+    "inserted": 0,
+    "skipped": 30
+  },
+  "suitable": {
+    "opportunities": 15,
+    "images": 20
+  },
+  "checked": {
+    "n": 30
+  },
+  "approved": {
+    "n": 0
+  },
+  "public_visible": {
+    "total": 0,
+    "records": []
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "version": "0.6.0",
+  "date": "2026-10-24",
+  "tests": 77,
+  "passed": 77,
+  "failed": 0,
+  "success": true,
+  "suites": [
+    {
+      "file": "database.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "Import and preservation all 48 opportunities and 22 watchlist sources import",
+          "status": "passed",
+          "duration_ms": 14.295490999999856
+        },
+        {
+          "name": "Import and preservation repeat import inserts no records and no duplicate audit/verification events",
+          "status": "passed",
+          "duration_ms": 171.24937799999998
+        },
+        {
+          "name": "Import and preservation every raw source record survives exactly and selected typed values are retained",
+          "status": "passed",
+          "duration_ms": 127.067184
+        },
+        {
+          "name": "Import and preservation stable IDs and fingerprints are unique",
+          "status": "passed",
+          "duration_ms": 2.0603610000002845
+        },
+        {
+          "name": "Import and preservation unknown month-only filming days and unknown pay remain null",
+          "status": "passed",
+          "duration_ms": 28.084843999999975
+        },
+        {
+          "name": "Import and preservation pending date claims are retained without inventing verified dates",
+          "status": "passed",
+          "duration_ms": 1.754507999999987
+        },
+        {
+          "name": "Import and preservation seed validation rejects invalid dates and unsafe links",
+          "status": "passed",
+          "duration_ms": 6.278167999999823
+        },
+        {
+          "name": "Authentication, database access and publication anonymous feed is empty; raw tables inaccessible",
+          "status": "passed",
+          "duration_ms": 27.854221999999936
+        },
+        {
+          "name": "Authentication, database access and publication authenticated nonadmin sees no private rows and cannot escalate membership",
+          "status": "passed",
+          "duration_ms": 5.421468999999888
+        },
+        {
+          "name": "Authentication, database access and publication nonadmin cannot edit, approve, view overview or ingest",
+          "status": "passed",
+          "duration_ms": 14.640311999999994
+        },
+        {
+          "name": "Authentication, database access and publication admins read private data but cannot bypass RPCs with direct SQL updates",
+          "status": "passed",
+          "duration_ms": 9.174517999999807
+        },
+        {
+          "name": "Authentication, database access and publication secure local password sessions, expiry and revocation",
+          "status": "passed",
+          "duration_ms": 137.36389499999996
+        },
+        {
+          "name": "Authentication, database access and publication publish requires prior approval; standard approval needs no note",
+          "status": "passed",
+          "duration_ms": 22.08445699999993
+        },
+        {
+          "name": "Authentication, database access and publication approval alone does not expose a record; explicit publication projects safe columns",
+          "status": "passed",
+          "duration_ms": 16.24262499999986
+        },
+        {
+          "name": "Authentication, database access and publication editing an approved record unpublishes and revokes approval; repeat import preserves admin changes",
+          "status": "passed",
+          "duration_ms": 183.23399699999936
+        },
+        {
+          "name": "Authentication, database access and publication stale revision and protected field edits fail",
+          "status": "passed",
+          "duration_ms": 14.940958000000137
+        },
+        {
+          "name": "Authentication, database access and publication negative prices, reversed date ranges and malformed month windows fail",
+          "status": "passed",
+          "duration_ms": 20.057385000000068
+        },
+        {
+          "name": "Authentication, database access and publication pending and unsuitable records cannot be approved",
+          "status": "passed",
+          "duration_ms": 8.591362999999546
+        },
+        {
+          "name": "Authentication, database access and publication sold out, expired dates, stale verification and closed deadlines prevent publication",
+          "status": "passed",
+          "duration_ms": 34.07609599999978
+        },
+        {
+          "name": "Authentication, database access and publication public gate independently hides records whose dates passed even if publication flag remains set",
+          "status": "passed",
+          "duration_ms": 20.854334999999992
+        },
+        {
+          "name": "Authentication, database access and publication public filters and pagination apply on server",
+          "status": "passed",
+          "duration_ms": 18.632119000000785
+        },
+        {
+          "name": "Authentication, database access and publication rejection and reopening are auditable and never publish",
+          "status": "passed",
+          "duration_ms": 9.863518000000113
+        },
+        {
+          "name": "Authentication, database access and publication audit history cannot be overwritten or deleted by administrators",
+          "status": "passed",
+          "duration_ms": 3.1574860000000626
+        },
+        {
+          "name": "Bounded source discovery synthetic connector validates structure, local dates, expiry, city and drops contact data",
+          "status": "passed",
+          "duration_ms": 14.356761999999435
+        },
+        {
+          "name": "Bounded source discovery source cannot be enabled without explicit legal review",
+          "status": "passed",
+          "duration_ms": 4.423200999999608
+        },
+        {
+          "name": "Bounded source discovery ingest fails when source disabled; source watchlist remains fully preserved",
+          "status": "passed",
+          "duration_ms": 5.068336000000272
+        },
+        {
+          "name": "Bounded source discovery worker creates private pending candidates; exact repeated payloads are unchanged",
+          "status": "passed",
+          "duration_ms": 19.281785999999556
+        },
+        {
+          "name": "Bounded source discovery source changes create an audit diff and reset verification without duplicate IDs",
+          "status": "passed",
+          "duration_ms": 9.030163999999786
+        },
+        {
+          "name": "Bounded source discovery duplicate source identities and same event under another source ID do not duplicate opportunities",
+          "status": "passed",
+          "duration_ms": 4.034174999999777
+        },
+        {
+          "name": "Bounded source discovery overlarge batch and worker publication attempts are rejected",
+          "status": "passed",
+          "duration_ms": 2.985972999999831
+        },
+        {
+          "name": "Exports and durable local PostgreSQL CSV escapes formulas and preserves unknown values",
+          "status": "passed",
+          "duration_ms": 0.5043969999996989
+        },
+        {
+          "name": "Exports and durable local PostgreSQL database survives process close/reopen on disk",
+          "status": "passed",
+          "duration_ms": 1798.4141399999999
+        },
+        {
+          "name": "date-only verification evidence does not invent a check timestamp",
+          "status": "passed",
+          "duration_ms": 1.3096990000003643
+        }
+      ]
+    },
+    {
+      "file": "discovery-ui.test.tsx",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "private preview supports city, casting and month-only filters without pretending there are seat-filler openings",
+          "status": "passed",
+          "duration_ms": 1132.460362
+        },
+        {
+          "name": "listing details preserve source/eligibility, month-only date precision and unpublished compensation",
+          "status": "passed",
+          "duration_ms": 1000.0649859999999
+        },
+        {
+          "name": "fetch errors show a useful message instead of a false empty successful feed",
+          "status": "passed",
+          "duration_ms": 29.492957999999817
+        }
+      ]
+    },
+    {
+      "file": "http.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "anonymous HTTP feed returns no unpublished data",
+          "status": "passed",
+          "duration_ms": 23.81824499999948
+        },
+        {
+          "name": "HTTP admin requests require a session",
+          "status": "passed",
+          "duration_ms": 15.905876000000717
+        },
+        {
+          "name": "login rejects bad credentials and cross-origin writes",
+          "status": "passed",
+          "duration_ms": 46.31008499999916
+        },
+        {
+          "name": "local login uses HttpOnly SameSite cookie; authenticated admin gets paginated rows",
+          "status": "passed",
+          "duration_ms": 55.71159799999987
+        },
+        {
+          "name": "HTTP editing records an audit note, preserves null prices and blocks protected fields",
+          "status": "passed",
+          "duration_ms": 49.43231900000046
+        },
+        {
+          "name": "admin source URLs remain data; table and RPC routing reject arbitrary identifiers",
+          "status": "passed",
+          "duration_ms": 18.53811399999995
+        },
+        {
+          "name": "logout revokes server-side session and admin access",
+          "status": "passed",
+          "duration_ms": 3.9343769999995857
+        },
+        {
+          "name": "local private filesystem routes cannot expose imported or credential data",
+          "status": "passed",
+          "duration_ms": 6.5649530000000595
+        },
+        {
+          "name": "v0.6 HTTP readiness and note-free actions retain authentication and permission checks",
+          "status": "passed",
+          "duration_ms": 81.67767300000014
+        }
+      ]
+    },
+    {
+      "file": "ui.test.tsx",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "private overview renders real database totals",
+          "status": "passed",
+          "duration_ms": 66.80055100000027
+        },
+        {
+          "name": "admin search, native date inputs and edits connect to real database RPCs",
+          "status": "passed",
+          "duration_ms": 1046.4622209999998
+        },
+        {
+          "name": "review controls allow approval without notes and keep publication separate",
+          "status": "passed",
+          "duration_ms": 504.4729610000004
+        },
+        {
+          "name": "private source watchlist preserves 22 sources with disabled monitoring",
+          "status": "passed",
+          "duration_ms": 168.1722689999997
+        },
+        {
+          "name": "nonadmin session renders sign-in without querying private data",
+          "status": "passed",
+          "duration_ms": 5.621503999999732
+        },
+        {
+          "name": "disabled review actions explain blockers; rejection requires a reason",
+          "status": "passed",
+          "duration_ms": 380.4274089999999
+        },
+        {
+          "name": "verification warning approval needs explicit acknowledgement and reason",
+          "status": "passed",
+          "duration_ms": 521.3552310000005
+        }
+      ]
+    },
+    {
+      "file": "v06.test.ts",
+      "status": "passed",
+      "tests": [
+        {
+          "name": "Approval improvements and automatic provenance standard save and approval need no note; identity/time/evidence/field diff are automatic",
+          "status": "passed",
+          "duration_ms": 83.6969339999996
+        },
+        {
+          "name": "Approval improvements and automatic provenance approve and publish remain separate; unpublish requires no repetitive note",
+          "status": "passed",
+          "duration_ms": 54.46338999999989
+        },
+        {
+          "name": "Approval improvements and automatic provenance reject requires an explicit reason",
+          "status": "passed",
+          "duration_ms": 29.221867000000202
+        },
+        {
+          "name": "Approval improvements and automatic provenance medium-confidence approval requires acknowledgement and reason; publication reuses that approval",
+          "status": "passed",
+          "duration_ms": 77.84627899999941
+        },
+        {
+          "name": "Approval improvements and automatic provenance editing clears warning overrides, approval and publication",
+          "status": "passed",
+          "duration_ms": 7.51816400000007
+        },
+        {
+          "name": "Approval improvements and automatic provenance override cannot bypass eligibility, source verification, expiry or freshness",
+          "status": "passed",
+          "duration_ms": 59.87556600000062
+        },
+        {
+          "name": "Approval improvements and automatic provenance direct table writes and unauthenticated/nonadmin review remain blocked",
+          "status": "passed",
+          "duration_ms": 10.605937999999696
+        },
+        {
+          "name": "Approval improvements and automatic provenance readiness exposes exact disabled-action explanations",
+          "status": "passed",
+          "duration_ms": 3.167540999999801
+        },
+        {
+          "name": "Working discovery and exception queue enabled/legally-reviewed sources only; lease prevents overlap",
+          "status": "passed",
+          "duration_ms": 14.740820999999414
+        },
+        {
+          "name": "Working discovery and exception queue source observations create private candidates with real discovery timestamps and flags",
+          "status": "passed",
+          "duration_ms": 36.334264999999505
+        },
+        {
+          "name": "Working discovery and exception queue identical data and timestamp-only source updates do not create changes or duplicate IDs",
+          "status": "passed",
+          "duration_ms": 18.141716999999517
+        },
+        {
+          "name": "Working discovery and exception queue meaningful changes are queued and editorial values are retained",
+          "status": "passed",
+          "duration_ms": 31.58785099999932
+        },
+        {
+          "name": "Working discovery and exception queue explicit cancellation and closed applications are detected without publication",
+          "status": "passed",
+          "duration_ms": 24.895050000000083
+        },
+        {
+          "name": "Working discovery and exception queue missing records require repeated successful ID checks; absence is not labelled cancelled",
+          "status": "passed",
+          "duration_ms": 21.435905999999704
+        },
+        {
+          "name": "Working discovery and exception queue missing/conflicting source information cannot be bypassed by a warning reason",
+          "status": "passed",
+          "duration_ms": 5.43514899999991
+        },
+        {
+          "name": "Working discovery and exception queue expiry/deadline maintenance preserves IDs, raw provenance and excludes passed windows",
+          "status": "passed",
+          "duration_ms": 21.73551099999986
+        },
+        {
+          "name": "Working discovery and exception queue failed checks record errors/backoff without approving or deleting data",
+          "status": "passed",
+          "duration_ms": 8.606445999999778
+        },
+        {
+          "name": "Working discovery and exception queue source-pending observations are never visible and workers cannot publish",
+          "status": "passed",
+          "duration_ms": 7.107195999999931
+        },
+        {
+          "name": "Parser and normalization time conflicts, unknown prices and absent values are explicit; contact details are omitted",
+          "status": "passed",
+          "duration_ms": 2.498830999999882
+        },
+        {
+          "name": "Parser and normalization expired, sold-out and irrelevant observations are recognized but never inflated into new active candidates",
+          "status": "passed",
+          "duration_ms": 1.5996289999993678
+        },
+        {
+          "name": "Parser and normalization conflicting date ranges are flagged, not silently invented",
+          "status": "passed",
+          "duration_ms": 0.6921759999995629
+        },
+        {
+          "name": "Parser and normalization HTML/timestamp-only edits do not change the meaningful content hash",
+          "status": "passed",
+          "duration_ms": 0.9453400000002148
+        },
+        {
+          "name": "Non-destructive v0.5 upgrade migration preserves login, edits, IDs, review history and publication; automatic backup is restorable",
+          "status": "passed",
+          "duration_ms": 2906.9765580000003
+        },
+        {
+          "name": "Non-destructive v0.5 upgrade a second process cannot open the same local database",
+          "status": "passed",
+          "duration_ms": 1342.0122920000003
+        },
+        {
+          "name": "Non-destructive v0.5 upgrade macOS installer preserves .local, .env and Git files, with a private full backup",
+          "status": "passed",
+          "duration_ms": 18.06105000000025
+        }
+      ]
+    }
+  ]
+}

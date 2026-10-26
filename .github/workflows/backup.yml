@@ -1,0 +1,37 @@
+name: Encrypted hosted database backup (owner opt-in)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 5 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: database-backup
+  cancel-in-progress: false
+jobs:
+  backup:
+    if: vars.CLOUD_BACKUP_ENABLED == 'true' && github.event.repository.private
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    container: postgres:17
+    steps:
+      - name: Dump and verify archive structure, then encrypt
+        shell: bash
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BACKUP_ENCRYPTION_KEY: ${{ secrets.BACKUP_ENCRYPTION_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$DATABASE_URL"
+          test ${#BACKUP_ENCRYPTION_KEY} -ge 32
+          export PGSSLMODE=require
+          pg_dump --dbname="$DATABASE_URL" --format=custom --no-owner --file=database.dump
+          pg_restore --list database.dump > /dev/null
+          openssl enc -aes-256-cbc -salt -pbkdf2 -in database.dump -out database.dump.enc -pass env:BACKUP_ENCRYPTION_KEY
+          rm database.dump
+      - uses: actions/upload-artifact@v4
+        with:
+          name: encrypted-database-${{ github.run_id }}
+          path: database.dump.enc
+          retention-days: 14
+          if-no-files-found: error

@@ -1,0 +1,797 @@
+{
+  "version": "0.6.3",
+  "started_at": "2026-10-25T13:16:00.043Z",
+  "completed_at": "2026-10-25T13:16:32.564Z",
+  "execution": "Authenticated admin HTTP route with real public API retrieval; fresh disk-backed PostgreSQL, separate from the existing user database",
+  "source": {
+    "source_id": "W-001",
+    "name": "Ville de Paris / Que Faire à Paris",
+    "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+    "license": "ODbL 1.0",
+    "license_url": "https://opendatacommons.org/licenses/odbl/1-0/"
+  },
+  "first_live_run": {
+    "images": {
+      "checked": 2,
+      "suitable_records": 2,
+      "suitable_images": 2,
+      "approved": 0,
+      "requests": 3,
+      "cached": 1,
+      "reports": [
+        {
+          "opportunity_id": "DS-W-001-69f77f38466ed3144ebea46722c88599",
+          "title": "Festival des Fiertés : Ciné - debat au CPA Angel Parra",
+          "source_urls": [
+            "https://www.paris.fr/evenements/festival-des-fiertes-cine-debat-au-cpa-angel-parra-126484"
+          ],
+          "checked_at": "2026-10-25T13:16:19.552Z",
+          "status": "found",
+          "images": [
+            {
+              "image_url": "https://cdn.paris.fr/qfapv4/2024/10/18/huge-1a8b7c830c2c55ce53cc06e84f203703.jpg",
+              "extraction_method": "official_api",
+              "source_title": "Festival des Fiertés : Ciné - debat au CPA Angel Parra",
+              "alt_text": "Festival des Fiertés : Ciné - debat au CPA Angel Parra",
+              "width": 1200,
+              "height": 750,
+              "attribution": "MA14",
+              "license_url": null,
+              "image_expires_at": null,
+              "event_name": "Festival des Fiertés : Ciné - debat au CPA Angel Parra",
+              "event_date": "2026-11-07",
+              "source_page": "https://www.paris.fr/evenements/festival-des-fiertes-cine-debat-au-cpa-angel-parra-126484",
+              "mime_type": "image/jpeg",
+              "retrieved_at": "2026-10-25T13:16:09.102Z",
+              "quality_status": "suitable",
+              "quality_flags": [],
+              "event_match_tokens": [
+                "fiertes",
+                "cine",
+                "debat",
+                "cpa",
+                "angel",
+                "parra"
+              ],
+              "evidence": {
+                "page_title": "Festival des Fiertés : Ciné - debat au CPA Angel Parra",
+                "event_name": "Festival des Fiertés : Ciné - debat au CPA Angel Parra",
+                "matched_title_tokens": [
+                  "fiertes",
+                  "cine",
+                  "debat",
+                  "cpa",
+                  "angel",
+                  "parra"
+                ],
+                "metadata_method": "official_api",
+                "source_retrieved_at": "2026-10-25T13:16:09.102Z",
+                "image_expiry_claim": null,
+                "image_probe": {
+                  "width": 1200,
+                  "height": 750,
+                  "mime_type": "image/jpeg",
+                  "header_fingerprint": "f65b9d734d275b78cd118035fa5b04833fb8ac271c511984ca9bae79997eecb7",
+                  "etag": "\"5d4055fe32b53aab30dfb92b5ba9e208\"",
+                  "last_modified": "Fri, 18 Jul 2025 01:06:52 GMT",
+                  "retrieved_at": "2026-10-25T13:16:19.549Z",
+                  "bytes_read": 262144,
+                  "image_url": "https://cdn.paris.fr/qfapv4/2024/10/18/huge-1a8b7c830c2c55ce53cc06e84f203703.jpg"
+                },
+                "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+              }
+            }
+          ],
+          "pages": [],
+          "requests": 2,
+          "cached": 0,
+          "inserted": 1
+        },
+        {
+          "opportunity_id": "DS-W-001-984b9e46c335128bb0fb81ff1135c694",
+          "title": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+          "source_urls": [
+            "https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327"
+          ],
+          "checked_at": "2026-10-25T13:16:24.739Z",
+          "status": "found",
+          "images": [
+            {
+              "image_url": "https://cdn.paris.fr/qfapv4/2026/10/24/huge-27ad912a92e1edb994d37a5d2777f968.png",
+              "extraction_method": "official_api",
+              "source_title": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+              "alt_text": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+              "width": 1200,
+              "height": 750,
+              "attribution": "Périphérie / Corpus Film",
+              "license_url": null,
+              "image_expires_at": null,
+              "event_name": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+              "event_date": "2026-11-21",
+              "source_page": "https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327",
+              "mime_type": "image/png",
+              "retrieved_at": "2026-10-25T13:16:09.102Z",
+              "quality_status": "suitable",
+              "quality_flags": [],
+              "event_match_tokens": [
+                "mois",
+                "doc",
+                "souvent",
+                "hiver",
+                "mutine",
+                "projection",
+                "rencontre"
+              ],
+              "evidence": {
+                "page_title": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+                "event_name": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+                "matched_title_tokens": [
+                  "mois",
+                  "doc",
+                  "souvent",
+                  "hiver",
+                  "mutine",
+                  "projection",
+                  "rencontre"
+                ],
+                "metadata_method": "official_api",
+                "source_retrieved_at": "2026-10-25T13:16:09.102Z",
+                "image_expiry_claim": null,
+                "image_probe": {
+                  "width": 1200,
+                  "height": 750,
+                  "mime_type": "image/png",
+                  "header_fingerprint": "8f3ebd0724ac19cf0239f40ddd950c0f9de75ba6167b25b47d2355b5cd4ea42f",
+                  "etag": "\"7c8db68fd470c0266dd2a32b9497e59a\"",
+                  "last_modified": "Sat, 24 Oct 2026 14:10:54 GMT",
+                  "retrieved_at": "2026-10-25T13:16:24.730Z",
+                  "bytes_read": 262144,
+                  "image_url": "https://cdn.paris.fr/qfapv4/2026/10/24/huge-27ad912a92e1edb994d37a5d2777f968.png"
+                },
+                "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+              }
+            }
+          ],
+          "pages": [],
+          "requests": 1,
+          "cached": 1,
+          "inserted": 1
+        }
+      ]
+    },
+    "started_at": "2026-10-25T13:16:03.973Z",
+    "completed_at": "2026-10-25T13:16:24.749Z",
+    "maintenance": {
+      "closed": 0,
+      "expired": 0
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "c8ff75a6-c0fe-4bc7-b951-79bb865edc6f",
+        "status": "ok",
+        "changed": 0,
+        "created": 2,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+          "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+          "requests": 1,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ],
+    "summary": {
+      "checked": 1,
+      "successful": 1,
+      "failed": 0,
+      "skipped": 0,
+      "fetched": 40,
+      "created": 2,
+      "changed": 0
+    }
+  },
+  "captured_live_replay": {
+    "images": {
+      "checked": 0,
+      "suitable_records": 0,
+      "suitable_images": 0,
+      "approved": 0,
+      "requests": 0,
+      "cached": 0,
+      "reports": []
+    },
+    "started_at": "2026-10-25T13:16:24.757Z",
+    "completed_at": "2026-10-25T13:16:24.777Z",
+    "maintenance": {
+      "closed": 0,
+      "expired": 0
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "b5fb0b26-c98b-458d-b58b-e6a226d8ba33",
+        "status": "ok",
+        "changed": 0,
+        "created": 0,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "note": "Exact replay of captured live observations; no synthetic records or additional HTTP retrieval",
+          "requests": 0,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ],
+    "summary": {
+      "checked": 1,
+      "successful": 1,
+      "failed": 0,
+      "skipped": 0,
+      "fetched": 40,
+      "created": 0,
+      "changed": 0
+    }
+  },
+  "second_live_run": {
+    "images": {
+      "checked": 0,
+      "suitable_records": 0,
+      "suitable_images": 0,
+      "approved": 0,
+      "requests": 0,
+      "cached": 0,
+      "reports": []
+    },
+    "started_at": "2026-10-25T13:16:24.783Z",
+    "completed_at": "2026-10-25T13:16:32.498Z",
+    "maintenance": {
+      "closed": 0,
+      "expired": 0
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "ae15c2a7-8a4b-4c1b-912f-731c5195b815",
+        "status": "ok",
+        "changed": 0,
+        "created": 0,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+          "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+          "requests": 2,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ],
+    "summary": {
+      "checked": 1,
+      "successful": 1,
+      "failed": 0,
+      "skipped": 0,
+      "fetched": 40,
+      "created": 0,
+      "changed": 0
+    }
+  },
+  "private_queue_total": 2,
+  "candidates": [
+    {
+      "opportunity_id": "DS-W-001-69f77f38466ed3144ebea46722c88599",
+      "title": "Festival des Fiertés : Ciné - debat au CPA Angel Parra",
+      "source_record_id": "126484",
+      "source_url": "https://www.paris.fr/evenements/festival-des-fiertes-cine-debat-au-cpa-angel-parra-126484",
+      "booking_url": null,
+      "event_start_date": "2026-11-07",
+      "event_end_date": "2026-11-07",
+      "discovered_at": "2026-10-25T13:16:09.159Z",
+      "source_updated_at": "2026-10-23T12:18:21.000Z",
+      "source_published_at": null,
+      "verification_status": "pending",
+      "approval_status": "pending",
+      "published": false,
+      "quality_flags": [
+        "conflicting_time",
+        "missing_access_instructions",
+        "missing_booking_route"
+      ],
+      "evidence": {
+        "license": "ODbL 1.0",
+        "audience": "Public jeunes et adultes. A partir de 14 ans.",
+        "date_end": "2026-11-07T16:00:00+00:00",
+        "date_start": "2026-11-07T14:30:00+00:00",
+        "source_url": "https://www.paris.fr/evenements/festival-des-fiertes-cine-debat-au-cpa-angel-parra-126484",
+        "access_type": "non",
+        "price_detail": "gratuit",
+        "status_evidence": null,
+        "date_description": "Le samedi 07 novembre 2026 de 14h30 à 16h00",
+        "source_updated_at": "2026-10-23T12:18:21.000Z"
+      }
+    },
+    {
+      "opportunity_id": "DS-W-001-984b9e46c335128bb0fb81ff1135c694",
+      "title": "Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre",
+      "source_record_id": "123327",
+      "source_url": "https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327",
+      "booking_url": null,
+      "event_start_date": "2026-11-21",
+      "event_end_date": "2026-11-21",
+      "discovered_at": "2026-10-25T13:16:09.159Z",
+      "source_updated_at": "2026-10-24T16:11:00.000Z",
+      "source_published_at": null,
+      "verification_status": "pending",
+      "approval_status": "pending",
+      "published": false,
+      "quality_flags": [
+        "conflicting_time",
+        "missing_access_instructions",
+        "missing_booking_route"
+      ],
+      "evidence": {
+        "license": "ODbL 1.0",
+        "audience": "Public jeunes et adultes.",
+        "date_end": "2026-11-21T20:00:00+00:00",
+        "date_start": "2026-11-21T17:00:00+00:00",
+        "source_url": "https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327",
+        "access_type": "non",
+        "price_detail": "gratuit",
+        "status_evidence": null,
+        "date_description": "Le samedi 21 novembre 2026 de 17h00 à 20h00",
+        "source_updated_at": "2026-10-24T16:11:00.000Z"
+      }
+    }
+  ],
+  "duplicate_id_groups": [],
+  "public_visible": 0,
+  "status": {
+    "sources": [
+      {
+        "enabled": true,
+        "revision": 8,
+        "source_id": "W-001",
+        "last_error": null,
+        "source_url": "https://parisdata.opendatasoft.com/explore/dataset/que-faire-a-paris-/api/",
+        "source_name": "Ville de Paris — Que Faire à Paris dataset",
+        "connector_key": "paris-open-data",
+        "coverage_note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+        "next_check_at": "2026-10-26T17:16:32.485+04:00",
+        "last_checked_at": "2026-10-25T17:16:32.485+04:00",
+        "last_success_at": "2026-10-25T17:16:32.485+04:00",
+        "legal_review_note": "Activation QA: documented Ville de Paris public API and ODbL source reviewed for private discovery; no original-organizer verification or publication.",
+        "legal_reviewed_at": "2026-10-25T17:16:00.043+04:00"
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-002",
+        "last_error": null,
+        "source_url": "https://whatson.bfi.org.uk/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=events",
+        "source_name": "BFI Southbank — Previews and events",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-003",
+        "last_error": null,
+        "source_url": "https://whatson.bfi.org.uk/imax/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=special-screenings-events",
+        "source_name": "BFI IMAX — Special screenings",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-004",
+        "last_error": null,
+        "source_url": "https://www.sroaudiences.com/shows.asp",
+        "source_name": "SRO Audiences — Current shows",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-005",
+        "last_error": null,
+        "source_url": "https://www.applausestore.com/home",
+        "source_name": "ApplauseStore — Show calendar and event pages",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-006",
+        "last_error": null,
+        "source_url": "https://bluecirclecasting.nl/aankomende-oproepen",
+        "source_name": "Blue Circle Casting — Upcoming calls",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-007",
+        "last_error": null,
+        "source_url": "https://www.castingcollective.co.uk/artiste/casting-calls",
+        "source_name": "Casting Collective — Specific casting calls",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-008",
+        "last_error": null,
+        "source_url": "https://www.legrandrex.com/mobile/prochainement.php",
+        "source_name": "Le Grand Rex — Upcoming and special screenings",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-009",
+        "last_error": null,
+        "source_url": "https://eva.avrotros.nl/pagina/bijwonen-2",
+        "source_name": "Eva / AVROTROS — Audience tickets",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-010",
+        "last_error": null,
+        "source_url": "https://festival.idfa.nl/en/",
+        "source_name": "IDFA — Festival programme and practical ticket information",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-011",
+        "last_error": null,
+        "source_url": "https://www.imaginefilmfestival.nl/haal-nu-je-kaartjes-voor-imagine-2026/",
+        "source_name": "Imagine Fantastic Film Festival — Programme",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-012",
+        "last_error": null,
+        "source_url": "https://www.fhcm.paris/en/paris-fashion-week",
+        "source_name": "FHCM — Paris Fashion Week calendar",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-013",
+        "last_error": null,
+        "source_url": "https://haussmann.galerieslafayette.com/en/events/original-fashion-shows/",
+        "source_name": "Galeries Lafayette — Original Fashion Shows",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-014",
+        "last_error": null,
+        "source_url": "https://www.nona-source.com/",
+        "source_name": "Nona Source — Brand event announcements",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-015",
+        "last_error": null,
+        "source_url": "https://www.somersethouse.org.uk/whats-on/skate-lates-26-27",
+        "source_name": "Somerset House — What’s On",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-016",
+        "last_error": null,
+        "source_url": "https://emissions-tv.com/agenda",
+        "source_name": "Cassandra — Television recording calendar",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-017",
+        "last_error": null,
+        "source_url": "https://idille-emissions.tv/",
+        "source_name": "Idille Émissions",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-018",
+        "last_error": null,
+        "source_url": "https://public-emission.com/faq",
+        "source_name": "Casting Events — Public Émission",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-019",
+        "last_error": null,
+        "source_url": "https://filmcastings.nl/nl-nl/figuranten",
+        "source_name": "Filmcastings.nl — Background listings",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-020",
+        "last_error": null,
+        "source_url": "https://www.castingcollective.co.uk/artiste",
+        "source_name": "Casting Collective — General registration",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-021",
+        "last_error": null,
+        "source_url": "https://www.applausestore.com/book-2027-ee-bafta-film-awards-red-carpet",
+        "source_name": "2027 EE BAFTA Film Awards — fan-pen interest page",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      },
+      {
+        "enabled": false,
+        "revision": 1,
+        "source_id": "W-022",
+        "last_error": null,
+        "source_url": "https://whatson.bfi.org.uk/lff/Online/default.asp?BOparam%3A%3AWScontent%3A%3AloadArticle%3A%3Apermalink=red-carpet-viewing-access",
+        "source_name": "BFI London Film Festival — Future red-carpet arrangements",
+        "connector_key": null,
+        "coverage_note": null,
+        "next_check_at": null,
+        "last_checked_at": null,
+        "last_success_at": null,
+        "legal_review_note": null,
+        "legal_reviewed_at": null
+      }
+    ],
+    "last_run": {
+      "error": null,
+      "run_id": "ae15c2a7-8a4b-4c1b-912f-731c5195b815",
+      "status": "unchanged",
+      "coverage": {
+        "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+        "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+        "requests": 2,
+        "returned": 40,
+        "duplicates": 0,
+        "missing_ids": [],
+        "retrieved_at": "2026-10-25T13:16:32.484Z",
+        "sample_limit": 60,
+        "connector_key": "paris-open-data",
+        "newly_relevant": 2,
+        "complete_catalog": false
+      },
+      "new_count": 0,
+      "source_id": "W-001",
+      "started_at": "2026-10-25T17:16:24.785+04:00",
+      "completed_at": "2026-10-25T17:16:32.485+04:00",
+      "changed_count": 0,
+      "fetched_count": 40
+    },
+    "ready_sources": 1,
+    "failed_sources": 0,
+    "enabled_sources": 1,
+    "last_success_at": "2026-10-25T17:16:32.485+04:00",
+    "pending_candidates": 2
+  },
+  "runs": [
+    {
+      "run_id": "ae15c2a7-8a4b-4c1b-912f-731c5195b815",
+      "source_id": "W-001",
+      "started_at": "2026-10-25T13:16:24.785Z",
+      "completed_at": "2026-10-25T13:16:32.485Z",
+      "status": "unchanged",
+      "fetched_count": 40,
+      "new_count": 0,
+      "changed_count": 0,
+      "error": null,
+      "coverage": {
+        "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+        "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+        "requests": 2,
+        "returned": 40,
+        "duplicates": 0,
+        "missing_ids": [],
+        "retrieved_at": "2026-10-25T13:16:32.484Z",
+        "sample_limit": 60,
+        "connector_key": "paris-open-data",
+        "newly_relevant": 2,
+        "complete_catalog": false
+      }
+    },
+    {
+      "run_id": "b5fb0b26-c98b-458d-b58b-e6a226d8ba33",
+      "source_id": "W-001",
+      "started_at": "2026-10-25T13:16:24.760Z",
+      "completed_at": "2026-10-25T13:16:24.765Z",
+      "status": "unchanged",
+      "fetched_count": 40,
+      "new_count": 0,
+      "changed_count": 0,
+      "error": null,
+      "coverage": {
+        "note": "Exact replay of captured live observations; no synthetic records or additional HTTP retrieval",
+        "requests": 0,
+        "returned": 40,
+        "duplicates": 0,
+        "missing_ids": [],
+        "retrieved_at": "2026-10-25T13:16:24.764Z",
+        "sample_limit": 60,
+        "connector_key": "paris-open-data",
+        "newly_relevant": 2,
+        "complete_catalog": false
+      }
+    },
+    {
+      "run_id": "c8ff75a6-c0fe-4bc7-b951-79bb865edc6f",
+      "source_id": "W-001",
+      "started_at": "2026-10-25T13:16:03.979Z",
+      "completed_at": "2026-10-25T13:16:09.159Z",
+      "status": "ok",
+      "fetched_count": 40,
+      "new_count": 2,
+      "changed_count": 0,
+      "error": null,
+      "coverage": {
+        "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+        "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+        "requests": 1,
+        "returned": 40,
+        "duplicates": 0,
+        "missing_ids": [],
+        "retrieved_at": "2026-10-25T13:16:09.158Z",
+        "sample_limit": 60,
+        "connector_key": "paris-open-data",
+        "newly_relevant": 2,
+        "complete_catalog": false
+      }
+    }
+  ],
+  "existing_database_writes": 0,
+  "paid_services_activated": false,
+  "cloud_schedule_activated": false
+}

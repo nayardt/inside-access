@@ -1,0 +1,22 @@
+{
+  "checked_date": "2026-10-25",
+  "browser": "Chrome",
+  "transport": "explicit dev-only synthetic layout fixtures; no database/authentication access",
+  "mobile": {
+    "outer_width": 375,
+    "viewport": 360,
+    "document_width": 360,
+    "panel_width": 330,
+    "metric_columns": "139px 139px",
+    "run_enabled_after_fixture_activation": true
+  },
+  "desktop": {
+    "outer_width": 1200,
+    "viewport": 1185,
+    "document_width": 1185,
+    "panel_width": 1137,
+    "metric_columns": "259.75px 259.75px 259.75px 259.75px"
+  },
+  "native_macos_or_mobile_tested": false,
+  "live_execution_evidence": "Separate authenticated HTTP/API log, not these synthetic layout fixtures"
+}

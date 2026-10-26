@@ -1,0 +1,14 @@
+Inside Access real discovery validation — 2026-10-26T13:32:07.966Z
+Source: W-001 / official Ville de Paris API / ODbL 1.0
+First live HTTP run: {"checked":1,"successful":1,"failed":0,"skipped":0,"fetched":40,"created":2,"changed":0}
+Captured live replay: {"checked":1,"successful":1,"failed":0,"skipped":0,"fetched":40,"created":0,"changed":0}
+Second live HTTP run: {"checked":1,"successful":1,"failed":0,"skipped":0,"fetched":40,"created":0,"changed":0}
+Automatic image processing: {"checked":2,"suitable_records":2,"suitable_images":2,"approved":0,"requests":3,"cached":1}
+Private candidates: 2; duplicate ID groups: 0; public records: 0
+DS-W-001-7b0f35850ef9b48e222320bf0f0453cc | Hommage à Roland Dyens, guitariste, professeur, improvisateur, compositeur
+  https://www.paris.fr/evenements/hommage-a-roland-dyens-guitariste-professeur-improvisateur-compositeur-126521
+  Discovered: 2026-10-26T13:32:17.776Z; verification: pending; approval: pending; published: false
+DS-W-001-984b9e46c335128bb0fb81ff1135c694 | Le Mois du doc : Souvent, l'hiver se mutine : projection et rencontre
+  https://www.paris.fr/evenements/souvent-l-hiver-se-mutine-projection-et-rencontre-123327
+  Discovered: 2026-10-26T13:32:17.776Z; verification: pending; approval: pending; published: false
+Existing user database writes: 0; no cloud schedule/paid feature/public deployment activated.

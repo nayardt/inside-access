@@ -1,0 +1,9 @@
+Inside Access authenticated Find images validation — 2026-10-25T13:38:03.122Z
+Opportunity: IA-AMS-006
+First actual source retrieval: {"checked":1,"suitable_records":1,"suitable_images":1,"approved":0,"requests":4,"cached":4,"rows_stored_or_refreshed":4}
+Second cached HTTP check: {"checked":1,"suitable_records":1,"suitable_images":1,"approved":0,"requests":0,"cached":5,"rows_stored_or_refreshed":0}
+Private review images: 4; repeat image rows identical; opportunity fields unchanged; public records: 0
+https://bluecirclecasting.nl/rollen/haantjes
+  https://bluecirclecasting.nl/media/3886/conversions/E4A5B377C0BCFABC5819DC22CC07E79FA9567167D2A251C2224EBBC67D0E0105-socials.jpg
+  1260x620; retrieved 2026-10-25T13:38:21.244Z; rights unknown / approval pending
+Owner database writes: 0; no paid feature or public deployment activated.

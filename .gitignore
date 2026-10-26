@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.local/
+.env
+.env.*
+!.env.example
+coverage/
+*.log
+
+# Database archives belong in protected backups, never source control.
+database/*.tgz
+*.dump
+*.dump.enc

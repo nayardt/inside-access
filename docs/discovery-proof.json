@@ -1,0 +1,22 @@
+{
+  "tested_at": "2026-10-24T19:56:02.250Z",
+  "observed_at": "2026-10-24T19:51:18.354Z",
+  "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records?limit=20&order_by=updated_at+desc",
+  "live_read_records": 15,
+  "first_ingestion": {
+    "changed": 0,
+    "created": 15,
+    "fetched": 15
+  },
+  "second_ingestion": {
+    "changed": 0,
+    "created": 0,
+    "fetched": 15
+  },
+  "public_visible": 0,
+  "main_database_writes": 0,
+  "monitoring_activated": false,
+  "license": "ODbL 1.0",
+  "attribution": "Ville de Paris — Que Faire à Paris",
+  "limits": "Bounded sample of 20 updated municipal contributor records, filtered to Paris and not expired. Records are not primary-organizer verified. Not a complete city feed."
+}

@@ -1,0 +1,96 @@
+{
+  "version": "0.6.0",
+  "tested_at": "2026-10-24T21:11:20.616Z",
+  "endpoint": "https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/que-faire-a-paris-/records",
+  "source": "W-001 — Ville de Paris / Que Faire à Paris",
+  "license": "ODbL 1.0",
+  "first": {
+    "maintenance": {
+      "closed": 0,
+      "expired": 0
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "7c503ca6-67b7-4d27-8598-934c8fda9520",
+        "status": "ok",
+        "changed": 0,
+        "created": 2,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+          "requests": 1,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ]
+  },
+  "repeated": {
+    "maintenance": {
+      "closed": 0,
+      "expired": 0
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "63638612-552c-4c8c-a0f7-b57329486f67",
+        "status": "ok",
+        "changed": 0,
+        "created": 0,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+          "requests": 1,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ]
+  },
+  "tracked_ids_rechecked": 2,
+  "tracked_ids_missing": [],
+  "rechecked": {
+    "maintenance": {
+      "closed": 0,
+      "expired": 0
+    },
+    "sources": [
+      {
+        "source_id": "W-001",
+        "run_id": "ac6053d3-c4fd-40e7-8f9c-5f673d6334e5",
+        "status": "ok",
+        "changed": 0,
+        "created": 0,
+        "fetched": 40,
+        "duplicates": 0,
+        "coverage": {
+          "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+          "requests": 2,
+          "sample_limit": 60,
+          "complete_catalog": false,
+          "returned": 40,
+          "newly_relevant": 2
+        }
+      }
+    ]
+  },
+  "public_visible": 0,
+  "main_database_writes": 0,
+  "scheduled_monitoring_activated": false,
+  "source_publication_timestamp": "Not supplied by this API; first discovery and source update times are recorded separately.",
+  "limits": {
+    "note": "Latest 40 updated Paris records plus up to 20 rotating tracked-ID checks. Bounded sample; not a complete catalogue or a guaranteed publication-time feed.",
+    "requests": 1,
+    "sample_limit": 60,
+    "complete_catalog": false,
+    "returned": 40,
+    "newly_relevant": 2
+  }
+}

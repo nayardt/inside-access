@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-26",
+  "browser": "Chrome",
+  "transport": "Explicit development-only layout fixtures; no real authentication/database bypass",
+  "primary_sections": [
+    "Inbox",
+    "Listings",
+    "System"
+  ],
+  "inbox_mobile": {
+    "width": 360,
+    "scroll_width": 360
+  },
+  "system_mobile": {
+    "width": 360,
+    "scroll_width": 360
+  },
+  "system_desktop": {
+    "width": 1185,
+    "scroll_width": 1185
+  },
+  "listings_mobile": {
+    "width": 375,
+    "scroll_width": 375
+  },
+  "editor_mobile": {
+    "width": 342,
+    "scroll_width": 342,
+    "default_section": "Publication review",
+    "publish_disabled_without_approval": true
+  },
+  "listings_desktop": {
+    "width": 1200,
+    "scroll_width": 1200
+  },
+  "native_macos_safari_mobile_os_tested": false
+}

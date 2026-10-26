@@ -1,0 +1,415 @@
+{
+  "version": "0.6.3",
+  "started_at": "2026-10-25T13:38:03.122Z",
+  "completed_at": "2026-10-25T13:38:26.343Z",
+  "execution": "Real official-page image retrieval through authenticated Find images HTTP endpoint; separate disk-backed PostgreSQL proof database",
+  "opportunity_id": "IA-AMS-006",
+  "first_live_check": {
+    "checked": 1,
+    "suitable_records": 1,
+    "suitable_images": 1,
+    "approved": 0,
+    "requests": 4,
+    "cached": 4,
+    "reports": [
+      {
+        "opportunity_id": "IA-AMS-006",
+        "title": "Haantjes — club guest and passer-by background roles",
+        "source_urls": [
+          "https://bluecirclecasting.nl/rollen/haantjes",
+          "https://bluecirclecasting.nl/rollen/haantjes/aanmelden"
+        ],
+        "checked_at": "2026-10-25T13:38:26.249Z",
+        "status": "found",
+        "images": [
+          {
+            "image_url": "https://bluecirclecasting.nl/media/3886/conversions/E4A5B377C0BCFABC5819DC22CC07E79FA9567167D2A251C2224EBBC67D0E0105-socials.jpg",
+            "extraction_method": "open_graph",
+            "source_title": "Haantjes (Netflix) | Blue Circle Casting",
+            "alt_text": "Haantjes — club guest and passer-by background roles",
+            "width": 1260,
+            "height": 620,
+            "attribution": null,
+            "license_url": null,
+            "image_expires_at": null,
+            "event_name": null,
+            "event_date": null,
+            "source_page": "https://bluecirclecasting.nl/rollen/haantjes",
+            "mime_type": "image/jpeg",
+            "retrieved_at": "2026-10-25T13:38:21.244Z",
+            "quality_status": "suitable",
+            "quality_flags": [],
+            "event_match_tokens": [
+              "haantjes"
+            ],
+            "evidence": {
+              "page_title": "Haantjes (Netflix) | Blue Circle Casting",
+              "event_name": null,
+              "matched_title_tokens": [
+                "haantjes"
+              ],
+              "metadata_method": "open_graph",
+              "source_retrieved_at": "2026-10-25T13:38:21.244Z",
+              "image_expiry_claim": null,
+              "image_probe": {
+                "width": 1260,
+                "height": 620,
+                "mime_type": "image/jpeg",
+                "header_fingerprint": "20b1042e2a22e6b86afc6e4b5e3414a89e0357248f7a9b3bb6aa93ae57fb4e94",
+                "etag": "\"6a3a4754-35623\"",
+                "last_modified": "Tue, 23 Jun 2026 08:44:04 GMT",
+                "retrieved_at": "2026-10-25T13:38:26.245Z",
+                "bytes_read": 218659,
+                "image_url": "https://bluecirclecasting.nl/media/3886/conversions/E4A5B377C0BCFABC5819DC22CC07E79FA9567167D2A251C2224EBBC67D0E0105-socials.jpg"
+              },
+              "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+            }
+          },
+          {
+            "image_url": "https://bluecirclecasting.nl/media/3885/conversions/23A373E117288E4877BD5B2C0EF903FC209E8960CDE59504F9C5896B50891B14-hero.jpg",
+            "extraction_method": "inline_event_image",
+            "source_title": "Haantjes (Netflix) | Blue Circle Casting",
+            "alt_text": "Haantjes — club guest and passer-by background roles",
+            "width": null,
+            "height": null,
+            "attribution": null,
+            "license_url": null,
+            "image_expires_at": null,
+            "event_name": null,
+            "event_date": null,
+            "source_page": "https://bluecirclecasting.nl/rollen/haantjes",
+            "mime_type": null,
+            "retrieved_at": "2026-10-25T13:38:21.244Z",
+            "quality_status": "rejected",
+            "quality_flags": [
+              "event_match_not_established",
+              "dimensions_unknown"
+            ],
+            "event_match_tokens": [],
+            "evidence": {
+              "page_title": "Haantjes (Netflix) | Blue Circle Casting",
+              "event_name": null,
+              "matched_title_tokens": [],
+              "metadata_method": "inline_event_image",
+              "source_retrieved_at": "2026-10-25T13:38:21.244Z",
+              "image_expiry_claim": null,
+              "image_probe": null,
+              "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+            }
+          },
+          {
+            "image_url": "https://bluecirclecasting.nl/img/bluecircle-logo.svg",
+            "extraction_method": "inline_event_image",
+            "source_title": "Haantjes (Netflix) | Blue Circle Casting",
+            "alt_text": "logo Blue Circle Casting",
+            "width": null,
+            "height": null,
+            "attribution": null,
+            "license_url": null,
+            "image_expires_at": null,
+            "event_name": null,
+            "event_date": null,
+            "source_page": "https://bluecirclecasting.nl/rollen/haantjes",
+            "mime_type": null,
+            "retrieved_at": "2026-10-25T13:38:21.244Z",
+            "quality_status": "rejected",
+            "quality_flags": [
+              "generic_logo_tracking_or_ad",
+              "vector_icon_not_a_verified_raster",
+              "event_match_not_established",
+              "dimensions_unknown"
+            ],
+            "event_match_tokens": [],
+            "evidence": {
+              "page_title": "Haantjes (Netflix) | Blue Circle Casting",
+              "event_name": null,
+              "matched_title_tokens": [],
+              "metadata_method": "inline_event_image",
+              "source_retrieved_at": "2026-10-25T13:38:21.244Z",
+              "image_expiry_claim": null,
+              "image_probe": null,
+              "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+            }
+          },
+          {
+            "image_url": "https://bluecirclecasting.nl/img/og-image.jpg",
+            "extraction_method": "open_graph",
+            "source_title": "Blue Circle Casting",
+            "alt_text": "Haantjes — club guest and passer-by background roles",
+            "width": 1260,
+            "height": 620,
+            "attribution": null,
+            "license_url": null,
+            "image_expires_at": null,
+            "event_name": null,
+            "event_date": null,
+            "source_page": "https://bluecirclecasting.nl/login-optioneel",
+            "mime_type": null,
+            "retrieved_at": "2026-10-25T13:38:25.420Z",
+            "quality_status": "rejected",
+            "quality_flags": [
+              "event_match_not_established"
+            ],
+            "event_match_tokens": [],
+            "evidence": {
+              "page_title": "Blue Circle Casting",
+              "event_name": null,
+              "matched_title_tokens": [],
+              "metadata_method": "open_graph",
+              "source_retrieved_at": "2026-10-25T13:38:25.420Z",
+              "image_expiry_claim": null,
+              "image_probe": null,
+              "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+            }
+          }
+        ],
+        "pages": [
+          {
+            "url": "https://bluecirclecasting.nl/rollen/haantjes",
+            "final_url": "https://bluecirclecasting.nl/rollen/haantjes",
+            "title": "Haantjes (Netflix) | Blue Circle Casting",
+            "error": null,
+            "retrieved_at": "2026-10-25T13:38:21.244Z",
+            "metadata_truncated": false
+          },
+          {
+            "url": "https://bluecirclecasting.nl/rollen/haantjes/aanmelden",
+            "final_url": "https://bluecirclecasting.nl/login-optioneel",
+            "title": "Blue Circle Casting",
+            "error": null,
+            "retrieved_at": "2026-10-25T13:38:25.420Z",
+            "metadata_truncated": false
+          }
+        ],
+        "requests": 4,
+        "cached": 4,
+        "inserted": 4
+      }
+    ]
+  },
+  "second_cached_check": {
+    "checked": 1,
+    "suitable_records": 1,
+    "suitable_images": 1,
+    "approved": 0,
+    "requests": 0,
+    "cached": 5,
+    "reports": [
+      {
+        "opportunity_id": "IA-AMS-006",
+        "title": "Haantjes — club guest and passer-by background roles",
+        "source_urls": [
+          "https://bluecirclecasting.nl/rollen/haantjes",
+          "https://bluecirclecasting.nl/rollen/haantjes/aanmelden"
+        ],
+        "checked_at": "2026-10-25T13:38:26.301Z",
+        "status": "found",
+        "images": [
+          {
+            "width": 1260,
+            "height": 620,
+            "alt_text": "Haantjes — club guest and passer-by background roles",
+            "image_url": "https://bluecirclecasting.nl/media/3886/conversions/E4A5B377C0BCFABC5819DC22CC07E79FA9567167D2A251C2224EBBC67D0E0105-socials.jpg",
+            "event_date": null,
+            "event_name": null,
+            "attribution": null,
+            "license_url": null,
+            "source_title": "Haantjes (Netflix) | Blue Circle Casting",
+            "image_expires_at": null,
+            "extraction_method": "open_graph",
+            "source_page": "https://bluecirclecasting.nl/rollen/haantjes",
+            "mime_type": "image/jpeg",
+            "retrieved_at": "2026-10-25T13:38:21.244Z",
+            "quality_status": "suitable",
+            "quality_flags": [],
+            "event_match_tokens": [
+              "haantjes"
+            ],
+            "evidence": {
+              "page_title": "Haantjes (Netflix) | Blue Circle Casting",
+              "event_name": null,
+              "matched_title_tokens": [
+                "haantjes"
+              ],
+              "metadata_method": "open_graph",
+              "source_retrieved_at": "2026-10-25T13:38:21.244Z",
+              "image_expiry_claim": null,
+              "image_probe": {
+                "etag": "\"6a3a4754-35623\"",
+                "width": 1260,
+                "height": 620,
+                "image_url": "https://bluecirclecasting.nl/media/3886/conversions/E4A5B377C0BCFABC5819DC22CC07E79FA9567167D2A251C2224EBBC67D0E0105-socials.jpg",
+                "mime_type": "image/jpeg",
+                "bytes_read": 218659,
+                "retrieved_at": "2026-10-25T13:38:26.245Z",
+                "last_modified": "Tue, 23 Jun 2026 08:44:04 GMT",
+                "header_fingerprint": "20b1042e2a22e6b86afc6e4b5e3414a89e0357248f7a9b3bb6aa93ae57fb4e94"
+              },
+              "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+            }
+          },
+          {
+            "width": null,
+            "height": null,
+            "alt_text": "Haantjes — club guest and passer-by background roles",
+            "image_url": "https://bluecirclecasting.nl/media/3885/conversions/23A373E117288E4877BD5B2C0EF903FC209E8960CDE59504F9C5896B50891B14-hero.jpg",
+            "event_date": null,
+            "event_name": null,
+            "attribution": null,
+            "license_url": null,
+            "source_title": "Haantjes (Netflix) | Blue Circle Casting",
+            "image_expires_at": null,
+            "extraction_method": "inline_event_image",
+            "source_page": "https://bluecirclecasting.nl/rollen/haantjes",
+            "mime_type": null,
+            "retrieved_at": "2026-10-25T13:38:21.244Z",
+            "quality_status": "rejected",
+            "quality_flags": [
+              "event_match_not_established",
+              "dimensions_unknown"
+            ],
+            "event_match_tokens": [],
+            "evidence": {
+              "page_title": "Haantjes (Netflix) | Blue Circle Casting",
+              "event_name": null,
+              "matched_title_tokens": [],
+              "metadata_method": "inline_event_image",
+              "source_retrieved_at": "2026-10-25T13:38:21.244Z",
+              "image_expiry_claim": null,
+              "image_probe": null,
+              "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+            }
+          },
+          {
+            "width": null,
+            "height": null,
+            "alt_text": "logo Blue Circle Casting",
+            "image_url": "https://bluecirclecasting.nl/img/bluecircle-logo.svg",
+            "event_date": null,
+            "event_name": null,
+            "attribution": null,
+            "license_url": null,
+            "source_title": "Haantjes (Netflix) | Blue Circle Casting",
+            "image_expires_at": null,
+            "extraction_method": "inline_event_image",
+            "source_page": "https://bluecirclecasting.nl/rollen/haantjes",
+            "mime_type": null,
+            "retrieved_at": "2026-10-25T13:38:21.244Z",
+            "quality_status": "rejected",
+            "quality_flags": [
+              "generic_logo_tracking_or_ad",
+              "vector_icon_not_a_verified_raster",
+              "event_match_not_established",
+              "dimensions_unknown"
+            ],
+            "event_match_tokens": [],
+            "evidence": {
+              "page_title": "Haantjes (Netflix) | Blue Circle Casting",
+              "event_name": null,
+              "matched_title_tokens": [],
+              "metadata_method": "inline_event_image",
+              "source_retrieved_at": "2026-10-25T13:38:21.244Z",
+              "image_expiry_claim": null,
+              "image_probe": null,
+              "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+            }
+          },
+          {
+            "width": 1260,
+            "height": 620,
+            "alt_text": "Haantjes — club guest and passer-by background roles",
+            "image_url": "https://bluecirclecasting.nl/img/og-image.jpg",
+            "event_date": null,
+            "event_name": null,
+            "attribution": null,
+            "license_url": null,
+            "source_title": "Blue Circle Casting",
+            "image_expires_at": null,
+            "extraction_method": "open_graph",
+            "source_page": "https://bluecirclecasting.nl/login-optioneel",
+            "mime_type": null,
+            "retrieved_at": "2026-10-25T13:38:25.420Z",
+            "quality_status": "rejected",
+            "quality_flags": [
+              "event_match_not_established"
+            ],
+            "event_match_tokens": [],
+            "evidence": {
+              "page_title": "Blue Circle Casting",
+              "event_name": null,
+              "matched_title_tokens": [],
+              "metadata_method": "open_graph",
+              "source_retrieved_at": "2026-10-25T13:38:25.420Z",
+              "image_expiry_claim": null,
+              "image_probe": null,
+              "rights": "Unknown: metadata and a public URL do not establish image reuse or hotlinking permission"
+            }
+          }
+        ],
+        "pages": [
+          {
+            "url": "https://bluecirclecasting.nl/rollen/haantjes",
+            "final_url": "https://bluecirclecasting.nl/rollen/haantjes",
+            "title": "Haantjes (Netflix) | Blue Circle Casting",
+            "error": null,
+            "retrieved_at": "2026-10-25T13:38:21.244Z",
+            "metadata_truncated": false
+          },
+          {
+            "url": "https://bluecirclecasting.nl/rollen/haantjes/aanmelden",
+            "final_url": "https://bluecirclecasting.nl/login-optioneel",
+            "title": "Blue Circle Casting",
+            "error": null,
+            "retrieved_at": "2026-10-25T13:38:25.420Z",
+            "metadata_truncated": false
+          }
+        ],
+        "requests": 0,
+        "cached": 5,
+        "inserted": 0
+      }
+    ]
+  },
+  "review_image_rows": 4,
+  "review_check": {
+    "report": {
+      "pages": [
+        {
+          "url": "https://bluecirclecasting.nl/rollen/haantjes",
+          "error": null,
+          "title": "Haantjes (Netflix) | Blue Circle Casting",
+          "final_url": "https://bluecirclecasting.nl/rollen/haantjes",
+          "retrieved_at": "2026-10-25T13:38:21.244Z",
+          "metadata_truncated": false
+        },
+        {
+          "url": "https://bluecirclecasting.nl/rollen/haantjes/aanmelden",
+          "error": null,
+          "title": "Blue Circle Casting",
+          "final_url": "https://bluecirclecasting.nl/login-optioneel",
+          "retrieved_at": "2026-10-25T13:38:25.420Z",
+          "metadata_truncated": false
+        }
+      ],
+      "title": "Haantjes — club guest and passer-by background roles",
+      "cached": 5,
+      "status": "found",
+      "requests": 0,
+      "checked_at": "2026-10-25T13:38:26.301Z",
+      "source_urls": [
+        "https://bluecirclecasting.nl/rollen/haantjes",
+        "https://bluecirclecasting.nl/rollen/haantjes/aanmelden"
+      ],
+      "opportunity_id": "IA-AMS-006"
+    },
+    "status": "found",
+    "checked_at": "2026-10-25T17:38:26.301+04:00",
+    "opportunity_id": "IA-AMS-006"
+  },
+  "identical_image_rows_on_repeat": true,
+  "opportunity_rows_unchanged": true,
+  "unauthenticated_status": 401,
+  "public_visible": 0,
+  "existing_database_writes": 0,
+  "rights_cleared": false
+}

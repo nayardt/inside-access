@@ -1,0 +1,30 @@
+{
+  "checked_date": "2026-10-25",
+  "browser": "Chrome",
+  "transport": "Explicit dev-only real React/CSS layout fixtures; synthetic API transport; no live authentication bypass",
+  "mobile": {
+    "outer_width": 375,
+    "document_width": 360,
+    "scroll_width": 360,
+    "image_preview_width": 284,
+    "image_preview_height": 160,
+    "real_preview_loaded": true,
+    "natural_width": 1260,
+    "natural_height": 620,
+    "object_fit": "cover",
+    "approval_enabled_with_unknown_rights": false
+  },
+  "desktop": {
+    "outer_width": 1200,
+    "document_width": 1200,
+    "scroll_width": 1200,
+    "image_preview_width": 885,
+    "image_preview_height": 498,
+    "real_preview_loaded": true,
+    "natural_width": 1260,
+    "natural_height": 620,
+    "object_fit": "cover"
+  },
+  "native_macos_or_mobile_tested": false,
+  "public_visibility_evidence": "Separate PostgreSQL and authenticated HTTP tests, not layout fixtures"
+}

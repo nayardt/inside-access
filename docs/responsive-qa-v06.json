@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-24",
+  "method": "Chrome browser, isolated real React components/CSS, synthetic transport; no database or login bypass",
+  "mobile_discovery": {
+    "frame_width": 375,
+    "content_width": 360,
+    "scroll_width": 360,
+    "cards_columns": "330px",
+    "version": "v0.6"
+  },
+  "mobile_editor": {
+    "content_width": 360,
+    "scroll_width": 360,
+    "dialog_width": 344,
+    "edit_columns": "287px",
+    "all_field_widths_equal": true,
+    "review_action_columns": "251px",
+    "disabled_explanations_visible": true
+  },
+  "desktop_editor": {
+    "content_width": 1200,
+    "scroll_width": 1200,
+    "dialog_width": 1000,
+    "edit_columns": "452.5px 452.5px"
+  },
+  "status": "PASS",
+  "limits": "Viewport/layout checks, not native Safari/iOS/Android execution."
+}
