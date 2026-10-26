@@ -16,7 +16,8 @@
       "production_branch": "main",
       "production_deployments_enabled": false,
       "preview_deployment_setting": "none",
-      "pr_comments_enabled": false
+      "pr_comments_enabled": false,
+      "deployments_enabled": false
     }
   },
   "deployment_configs": {

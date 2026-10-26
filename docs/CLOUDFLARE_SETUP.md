@@ -11,6 +11,7 @@ The owner explicitly approved creating the project with deployment paused. The p
 | Account | 7f66ca1d65e8949f984b361f9f9b284b |
 | Git repository | private nayardt/inside-access |
 | Production branch | main |
+| Global Git deployments | disabled |
 | Production automatic deployments | disabled |
 | Preview automatic deployments | none |
 | Deployments | 0 |
@@ -22,11 +23,11 @@ Both production and preview environment settings match the prepared [configurati
 
 [Machine-readable verification](cloudflare-project-verification.json) records the actual project GET and deployment-list results. No application code or database content was changed in this hosting step. No paid service was activated.
 
-The API also returns the deprecated source.config.deployments_enabled flag as true. The current, granular controls were explicitly checked: production_deployments_enabled is false and preview_deployment_setting is none. These are the documented branch controls; do not mistake the deprecated flag for an active release.
+A post-commit check caught a GitHub push creating one production deployment record at queued/idle despite both granular branch controls being paused. No stage had started and no canonical deployment existed. The global source.config.deployments_enabled switch was explicitly set false as well, and the never-started queued record was removed. The current pause therefore uses all three controls: global false, production false and previews none. This provider behavior means the granular controls alone are insufficient evidence of a fully paused queue in this account.
 
 ## Updates after owner-approved cutover
 
-The native Cloudflare Git integration will handle updates from main when production deployments are enabled after approval. Every release must pass tests and data checks before the frontend build. Retain previews disabled unless required. Keep the manual GitHub deployment workflow disabled as a fallback to avoid two deployment systems. Everyday founder operation should require a browser, without downloading ZIPs or using Terminal.
+The native Cloudflare Git integration will handle updates from main when the global and production deployment switches are enabled after approval. Every release must pass tests and data checks before the frontend build. Retain previews disabled unless required. Keep the manual GitHub deployment workflow disabled as a fallback to avoid two deployment systems. Everyday founder operation should require a browser, without downloading ZIPs or using Terminal.
 
 ## Remaining readiness gates
 
@@ -35,7 +36,7 @@ The native Cloudflare Git integration will handle updates from main when product
 3. Perform hosted smoke tests and review the initial release with the owner.
 4. Obtain explicit deployment approval before creating any frontend deployment or enabling production automatic deployments.
 
-The Mac app remains the operational fallback until cutover checks pass. No new opportunity approval, publication decision or image approval was made by project setup.
+The Mac app remains the operational fallback until cutover checks pass. No build or deployment stage was started by the queued-record cleanup. No new opportunity approval, publication decision or image approval was made by project setup.
 
 ## Previous blocker and recovery
 

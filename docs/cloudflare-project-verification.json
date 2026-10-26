@@ -12,7 +12,8 @@
     "canonical_deployment": null,
     "build_config_matches": true,
     "production_environment_matches": true,
-    "preview_environment_matches": true
+    "preview_environment_matches": true,
+    "global_deployments_enabled": false
   },
   "deployment_count": 0,
   "deployments": [],
@@ -20,5 +21,15 @@
   "account_id": "7f66ca1d65e8949f984b361f9f9b284b",
   "owner_approved": "Create inside-access-nayardt with deployment paused",
   "paid_services_activated": false,
-  "application_code_changed": false
+  "application_code_changed": false,
+  "unexpected_queue_record": {
+    "id": "3d71863c-e540-41d9-bfc6-cd10335eb465",
+    "trigger": "documentation commit github:push",
+    "stage": "queued",
+    "status": "idle",
+    "any_stage_started": false,
+    "canonical_deployment": null,
+    "removed": true,
+    "corrective_action": "Explicitly disabled global Git deployments in addition to both branch controls"
+  }
 }
