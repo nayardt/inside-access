@@ -15,6 +15,7 @@ let db:DB,admin:string;
 const run=(name:string,args:unknown[]=[])=>asRole(db,'authenticated',admin,tx=>rpc<any>(tx,name,args));
 beforeAll(async()=>{
  db=await openLocal('memory://');await migrate(db);await importSeed(db);admin=await createLocalAdmin(db,'ui@example.test','Only-a-test-ui-password-2026!');
+ vi.spyOn(api,'backupStatus').mockResolvedValue({available:false,reason:'Isolated in-memory test database; disk backups are tested separately.'});
  vi.spyOn(api,'discoveryStatus').mockImplementation(()=>run('admin_discovery_status'));
  vi.spyOn(api,'reviewState').mockImplementation(id=>run('get_review_state',[id]));
  vi.spyOn(api,'overview').mockImplementation(()=>run('admin_overview'));
