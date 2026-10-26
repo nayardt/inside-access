@@ -4,7 +4,7 @@ import {enrichImages} from '../images/worker.js';
 import {runDiscovery,localStore} from '../discovery/runner.js';
 import { asRole,rpc,type DB } from './database.js';
 import { signIn,sessionUser,tokenHash } from './auth.js';
-const tables=['opportunities','sources','audit_history','verification_checks','discovery_runs','discovery_changes','opportunity_images','image_enrichment_checks'] as const;
+const tables=['opportunities','sources','audit_history','verification_checks','discovery_runs','discovery_changes','source_snapshots','opportunity_images','image_enrichment_checks'] as const;
 export function createApp(db:DB){
  const app=express();app.disable('x-powered-by');
  // Vite is a development server: explicitly deny private source/data paths before its middleware.
@@ -58,7 +58,7 @@ export function createApp(db:DB){
   if(table==='discovery_changes')eq('status','status');
   // Helpers called by RLS-protected admin queries need execution rights; these grants are in migration 002.
   const where=conditions.length?' where '+conditions.join(' and '):'';
-  const order=table==='opportunities'?'opportunity_id':table==='sources'?'source_id':table==='audit_history'?'audit_id desc':table==='verification_checks'?'recorded_at desc':table==='discovery_changes'?'detected_at desc':table==='opportunity_images'?'image_id':table==='image_enrichment_checks'?'checked_at desc':'started_at desc';
+  const order=table==='opportunities'?'opportunity_id':table==='sources'?'source_id':table==='source_snapshots'?'source_id,external_id':table==='audit_history'?'audit_id desc':table==='verification_checks'?'recorded_at desc':table==='discovery_changes'?'detected_at desc':table==='opportunity_images'?'image_id':table==='image_enrichment_checks'?'checked_at desc':'started_at desc';
   const result=await asRole(db,'authenticated',res.locals.user.id,async tx=>{
    const total=await tx.query<{n:number}>(`select count(*)::int n from public.${table}${where}`,params);
    const rows=await tx.query(`select ${table==='opportunities'?'*,public.display_image(opportunity_id) as display_image':'*'} from public.${table}${where} order by ${order} limit $${params.length+1} offset $${params.length+2}`,[...params,limit,offset]);return {records:rows.rows,total:total.rows[0].n};

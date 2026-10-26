@@ -27,3 +27,5 @@ test('source-change status filters work through HTTP and treat injection text as
  expect((await agent.get('/api/admin/rows/discovery_changes').query({status:"pending' OR 1=1--"})).body.total).toBe(0);
  expect((await request(app).get('/api/admin/rows/discovery_changes?status=dismissed')).status).toBe(401);
 });
+
+test('complete browser export can retrieve source snapshots with stable pagination while anonymous access is denied',async()=>{await agent.post('/api/auth/login').send({email:'http@example.test',password:'Http-test-only-password-2026!'});await db.query("insert into public.source_snapshots(source_id,external_id,content_hash,payload) values('W-001','export-b','b','{}'),('W-001','export-a','a','{}')");const first=await agent.get('/api/admin/rows/source_snapshots?limit=1');const second=await agent.get('/api/admin/rows/source_snapshots?limit=1&offset=1');expect(first.status).toBe(200);expect(first.body.total).toBe(2);expect(first.body.records[0].external_id).toBe('export-a');expect(second.body.records[0].external_id).toBe('export-b');expect((await request(app).get('/api/admin/rows/source_snapshots')).status).toBe(401);});

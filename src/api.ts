@@ -37,9 +37,10 @@ export const api={
  async overview():Promise<Row>{return mode==='local'?request('/api/admin/overview'):cloudRpc('admin_overview');},
  async rows(table:string,filters:Filters={}):Promise<Page>{
   if(mode==='local')return request('/api/admin/rows/'+table+'?'+qs(filters));
-  if(!['opportunities','sources','audit_history','verification_checks','discovery_runs','discovery_changes','opportunity_images','image_enrichment_checks'].includes(table))throw new Error('Invalid table');
-  const id=table==='opportunities'?'opportunity_id':table==='sources'?'source_id':table==='audit_history'?'audit_id':table==='verification_checks'?'recorded_at':table==='discovery_changes'?'detected_at':table==='opportunity_images'?'image_id':table==='image_enrichment_checks'?'checked_at':'started_at';
-  let query=cloud().from(table).select('*',{count:'exact'}).order(id,{ascending:!['audit_history','verification_checks','discovery_runs','discovery_changes','opportunity_images','image_enrichment_checks'].includes(table)});
+  if(!['opportunities','sources','audit_history','verification_checks','discovery_runs','discovery_changes','source_snapshots','opportunity_images','image_enrichment_checks'].includes(table))throw new Error('Invalid table');
+  const id=table==='opportunities'?'opportunity_id':table==='sources'?'source_id':table==='source_snapshots'?'source_id':table==='audit_history'?'audit_id':table==='verification_checks'?'recorded_at':table==='discovery_changes'?'detected_at':table==='opportunity_images'?'image_id':table==='image_enrichment_checks'?'checked_at':'started_at';
+  let query=cloud().from(table).select('*',{count:'exact'}).order(id,{ascending:!['audit_history','verification_checks','discovery_runs','discovery_changes','source_snapshots','opportunity_images','image_enrichment_checks'].includes(table)});
+  if(table==='source_snapshots')query=query.order('external_id',{ascending:true});
   if(table==='discovery_changes'&&filters.status)query=query.eq('status',filters.status);
   for(const [key,col] of Object.entries({city:'city',group:'origin_group',verification:'verification_status',lifecycle:'lifecycle_status',approval:'approval_status'}))if(filters[key])query=query.eq(col,filters[key]);
   if(filters.query){const q=String(filters.query).replace(/[(),.%_"\\]/g,' ');query=query.or(`title.ilike.%${q}%,opportunity_id.ilike.%${q}%,organizer.ilike.%${q}%`);}
