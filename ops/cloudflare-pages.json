@@ -1,0 +1,64 @@
+{
+  "name": "inside-access-nayardt",
+  "production_branch": "main",
+  "build_config": {
+    "build_command": "npm test && npm run verify:data && npm run build",
+    "destination_dir": "dist",
+    "root_dir": "/"
+  },
+  "source": {
+    "type": "github",
+    "config": {
+      "owner": "nayardt",
+      "owner_id": "347535946",
+      "repo_name": "inside-access",
+      "repo_id": "1432532014",
+      "production_branch": "main",
+      "production_deployments_enabled": false,
+      "preview_deployment_setting": "none",
+      "pr_comments_enabled": false
+    }
+  },
+  "deployment_configs": {
+    "preview": {
+      "env_vars": {
+        "NODE_VERSION": {
+          "type": "plain_text",
+          "value": "24"
+        },
+        "VITE_DATA_MODE": {
+          "type": "plain_text",
+          "value": "supabase"
+        },
+        "VITE_SUPABASE_URL": {
+          "type": "plain_text",
+          "value": "https://ahxcgrwkifwkewvvhlad.supabase.co"
+        },
+        "VITE_SUPABASE_ANON_KEY": {
+          "type": "plain_text",
+          "value": "sb_publishable_LNFyUgm5ckyFT2diAQ7ujQ_skBhEtDr"
+        }
+      }
+    },
+    "production": {
+      "env_vars": {
+        "NODE_VERSION": {
+          "type": "plain_text",
+          "value": "24"
+        },
+        "VITE_DATA_MODE": {
+          "type": "plain_text",
+          "value": "supabase"
+        },
+        "VITE_SUPABASE_URL": {
+          "type": "plain_text",
+          "value": "https://ahxcgrwkifwkewvvhlad.supabase.co"
+        },
+        "VITE_SUPABASE_ANON_KEY": {
+          "type": "plain_text",
+          "value": "sb_publishable_LNFyUgm5ckyFT2diAQ7ujQ_skBhEtDr"
+        }
+      }
+    }
+  }
+}
