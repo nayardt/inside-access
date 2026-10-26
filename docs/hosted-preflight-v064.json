@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-10-26T15:27:38.503Z",
+  "project_id": "ahxcgrwkifwkewvvhlad",
+  "organization": "Inside Access",
+  "subscription_plan": "free",
+  "new_project_created": false,
+  "preexisting_application_tables": 0,
+  "preexisting_auth_users": 0,
+  "application_migrations": [
+    {
+      "name": "202610240001_core.sql",
+      "sha256": "186f2aa75da1720d1b378dd56f6719a94ecd25993765292980f2bfc2837fd8c8"
+    },
+    {
+      "name": "202610240002_admin.sql",
+      "sha256": "dbc4ef17637f665548cd484c5f51a823e2f4039259ecb6ac233bfa69ea14ba55"
+    },
+    {
+      "name": "202610240003_discovery.sql",
+      "sha256": "a608ebfcccaa51aae90756e8eca417a3f48f632cd2b1114f8ff20d477f422c98"
+    },
+    {
+      "name": "202610240004_review_workflow.sql",
+      "sha256": "e7015f41a12ada1e4517fee06a6a0c44e69931eb88c444694a03f5177cf161af"
+    },
+    {
+      "name": "202610240005_discovery_engine.sql",
+      "sha256": "d77e7fabbc76ec8e4fbc6a376fe33f5e01a2f94edce4055b46188e2c78f3f927"
+    },
+    {
+      "name": "202610250006_source_change_audit.sql",
+      "sha256": "406e9e152b3119fdb1bef1e895fe9b44920580cb0d83b31399e43fe62928e8ed"
+    },
+    {
+      "name": "202610250007_discovery_status.sql",
+      "sha256": "fa4ddc71e4501b1b43968201b4fdb16d608220c9b2fd03bc858ae6aaa44114aa"
+    },
+    {
+      "name": "202610250008_event_images.sql",
+      "sha256": "6ac2120056c6c5b53bded5c847d26f5cc9ece6d186c91c5e83374b4bdba3c32a"
+    }
+  ],
+  "installed_application_tables": 10,
+  "public_tables_without_rls": 0,
+  "anonymous_table_select_grants": 0,
+  "authenticated_direct_write_grants": 0,
+  "anonymous_review_permission": false,
+  "worker_publication_permission": false,
+  "worker_image_approval_permission": false,
+  "nonadmin_role_checks": "PASS: overview, publication and image approval rejected; role simulation rolled back; no Auth user created",
+  "live_api_checks": [
+    {
+      "check": "public feed",
+      "status": 200,
+      "records": 0
+    },
+    {
+      "check": "anonymous private table",
+      "status": 401,
+      "code": "42501"
+    },
+    {
+      "check": "anonymous admin RPC",
+      "status": 401,
+      "code": "42501"
+    }
+  ],
+  "opportunities_imported": 0,
+  "sources_imported": 0,
+  "publications": 0,
+  "auth_users": 0,
+  "owner_mac_touched": false,
+  "public_app_deployed": false,
+  "pending": [
+    "Owner Mac current JSON export and complete-history reconciliation",
+    "Owner-controlled application Auth setup, admin membership and signup settings",
+    "Full hosted import/restore validation on the owner data",
+    "Cloudflare protected staging and deployment authorization"
+  ],
+  "advisor_notes": {
+    "deny_all_image_cache_rls": "Intentional: no client policies or client grants; service-only RPC access",
+    "anonymous_security_definer_count": 3,
+    "authenticated_security_definer_count": 16,
+    "review": "Existing projection and admin-guarded API design; execute privileges reviewed and public/nonadmin access tested. This is not a claim of zero advisor notices.",
+    "performance_unindexed_foreign_keys": 10,
+    "performance_unused_indexes": 7
+  }
+}
