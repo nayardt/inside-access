@@ -1,0 +1,70 @@
+{
+  "checked_on": "2026-10-26",
+  "project_id": "ahxcgrwkifwkewvvhlad",
+  "original_export_sha256": "a8857913112977a4e9fa87bb33c4c4a079cc105dd849e67e1c5f54a56a161cc6",
+  "normalized_payload_sha256": "8ffed86727c4c39bf8d9656f804fd13b5ea15f60bdcd36ee09ee7e2ffa258dfa",
+  "owner_waiver": "no need to preserve history proceed",
+  "omitted_unavailable_data": [
+    "source_snapshots"
+  ],
+  "supplied_history_preserved": true,
+  "counts": {
+    "sources": 22,
+    "audit_history": 307,
+    "opportunities": 50,
+    "discovery_runs": 1,
+    "source_snapshots": 0,
+    "discovery_changes": 0,
+    "opportunity_images": 216,
+    "verification_checks": 50,
+    "image_enrichment_checks": 32
+  },
+  "admin_members": 0,
+  "origin_groups": {
+    "pending": 6,
+    "selected": 30,
+    "discovered": 2,
+    "unsuitable": 12
+  },
+  "published_ids": [
+    "IA-AMS-001",
+    "IA-AMS-003"
+  ],
+  "import_batches": 1,
+  "approved_images": 0,
+  "disabled_triggers": 0,
+  "anon_select_grants": 0,
+  "audit_sequence_ready": true,
+  "public_tables_without_rls": 0,
+  "authenticated_direct_writes": 0,
+  "checks": {
+    "isolated_atomic_restore": "PASS",
+    "isolated_repeat": "PASS",
+    "isolated_corrupt_payload_rollback": "PASS",
+    "hosted_field_equality_all_8_supplied_tables": "PASS",
+    "hosted_repeat_no_duplicates": "PASS",
+    "public_feed_http": 200,
+    "public_feed_total": 2,
+    "anonymous_private_table_http": 401,
+    "anonymous_admin_overview_http": 401,
+    "retired_helper_http": 410,
+    "staging_dropped": true,
+    "owner_mac_changed": false,
+    "frontend_deployed": false,
+    "paid_features_activated": false
+  },
+  "ci": {
+    "run": 40351658200,
+    "url": "https://github.com/nayardt/inside-access/actions/runs/40351658200",
+    "test_files": 9,
+    "tests_passed": 124,
+    "data_reconciliation": "PASS",
+    "production_build": "PASS"
+  },
+  "remaining": [
+    "Owner password/email verification and app admin membership",
+    "Cloudflare setup and explicit deployment approval",
+    "Hosted discovery/backup schedule and restore exercise before cutover"
+  ]
+}
+

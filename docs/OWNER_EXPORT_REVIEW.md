@@ -1,21 +1,35 @@
-# Owner export review — 26 October 2026
+# Owner data transfer — 26 October 2026
 
-The owner's browser export was inspected without modifying the original file or the hosted database. Supplied rows were restored into isolated local PostgreSQL with identity values and actor UUID references retained. User triggers were disabled only in the disposable rehearsal transaction so restoration did not reset existing decisions or append artificial history; FK/check validation remained enabled. No hosted Auth user was created.
+The owner authorized proceeding without unavailable history: “no need to preserve history proceed.” Only the absent source_snapshots data was omitted. All supplied audit, verification, discovery-run and image records were preserved. The original uploaded file and Mac database were not changed.
 
-| Supplied data | Count |
+| Data | Imported |
 | --- | ---: |
-| Opportunities | 50: 30 selected, 6 pending, 12 unsuitable, 2 discovered |
-| Discovery sources | 22 |
+| Opportunities | 50: selected 30, pending 6, unsuitable 12, discovered 2 |
+| Sources | 22 |
 | Verification checks | 50 |
 | Audit entries | 307 |
-| Discovery runs | 1 |
-| Pending source changes | 0 |
-| Image metadata | 216: 215 pending, 1 rejected; no image approved |
-| Image checks | 32 |
-| Already published opportunities | 2 |
+| Discovery runs / changes | 1 / 0 |
+| Image metadata / image checks | 216 / 32 |
+| Existing publications | 2 |
+| Approved images | 0 |
 
-All eight supplied tables matched after the rehearsal, comparing SQL timestamps as the same UTC instants and numeric amounts independent of decimal-string JSON representation. Missing values stayed null/unknown. The isolated public feed showed precisely the owner's two already approved/published listings; nothing new was approved. The computed display_image property is a public projection, not a database column, and was omitted only from storage. The original export was left unchanged.
+The export SHA256 is recorded in [the actual validation report](owner-cloud-transfer-v064.json). The computed display_image property was removed only from database storage. Nulls, dates, prices, stable IDs, evidence, actor IDs and approval/publication fields were compared against typed SQL records in all eight supplied tables. The two existing publications remain IA-AMS-001 and IA-AMS-003; nothing new was approved or published.
 
-**Migration completeness gate:** source_snapshots is absent from this export, while the stored successful discovery run observed 40 records. Absence must not be interpreted as an empty table. Browser exports previously omitted this table; the private export API/UI have now been corrected with deterministic composite-key pagination and an HTTP authorization regression test. No schema migration is needed for that export fix.
+## Restore and security evidence
 
-Do not replace the owner's edited database with the initial seed, regenerate historical source evidence or silently discard the missing rows. Obtain a full, consistent copy of the stopped local database for the one-time transfer. Keep credentials/session material private and out of GitHub. The cloud application remains empty until the complete handover and Auth reference mapping are validated. The Mac database has not been changed.
+An isolated database rehearsal passed atomic restore, every-field equality, repeated import without duplicates, and rollback on a corrupt payload. The same SQL ran successfully twice against the initially empty hosted tables, retaining exactly one import receipt and 307 original audit entries. User triggers were suspended only within the exclusive, atomic restoration transaction; constraints and foreign keys stayed enabled. Every trigger is enabled afterward. Audit identity allocation was advanced beyond the restored maximum.
+
+A temporary private-schema staging table received 22 payload parts. Their combined checksum was verified before restoring. The staging table was dropped after successful validation. [The operator-only restore SQL](../scripts/restore-staged-owner-export.sql) is retained for review; it is not a client RPC or an application migration. It rejects a changed payload or a nonempty target rather than overwriting data.
+
+The original owner UUID/email was created through the supported Auth Admin API, preserving approval foreign keys. No invitation or recovery email was sent and no owner-chosen password was transferred or set. The account is unconfirmed and has no app-admin membership. The short-lived migration helper required both JWT validation and a random migration credential, accepted only a fixed identity, and was replaced with an inert HTTP 410 response immediately afterward. It exposed no service key. Its unauthorized request returned 403; its retired version returned 410 even with the former credential. The hosted application remains inaccessible to an administrator until the owner completes secure Auth setup and membership is granted.
+
+Actual public Data API requests returned only the two existing publications (HTTP 200); anonymous base-table access and admin overview returned HTTP 401. All ten public application tables retain RLS, with zero anonymous table SELECT grants and zero authenticated direct writes.
+
+## Explicit limits and next steps
+
+source_snapshots is absent from the old export despite a run recording 40 observations. The hosted snapshot table is empty because that missing data was waived, not because the old database was proven empty. Do not fabricate historical observations. A future successful source run establishes a fresh comparison baseline; existing opportunity deduplication still applies.
+
+The latest GitHub check passed **124 tests in nine files**, data reconciliation and production build: [run 40351658200](https://github.com/nayardt/inside-access/actions/runs/40351658200).
+
+Cloudflare hosting, owner password/email verification, app-admin membership and live cloud schedules are still pending. No public frontend was deployed and no paid feature was enabled. The original Mac app remains the rollback route until cloud login, discovery, backups and restoration are verified. The JSON transfer is not a full Auth/session/image-cache backup.
+
