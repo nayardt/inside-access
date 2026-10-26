@@ -1,40 +1,52 @@
-# Cloudflare hosting handover — 26 October 2026
+# Cloudflare hosting setup — 26 October 2026
 
-Cloudflare connection identity matches the project owner. The connected account is 7f66ca1d65e8949f984b361f9f9b284b. Existing Pages projects: zero, checked before and after the setup attempt.
+The owner explicitly approved creating the project with deployment paused. The project was created successfully and read back through the Cloudflare API.
 
-## Prepared configuration
+## Verified current state
 
-[ops/cloudflare-pages.json](../ops/cloudflare-pages.json) contains the reviewed Pages creation request. It uses the existing private nayardt/inside-access repository, Node 24, Supabase client mode, the existing database URL and a browser-safe publishable key. There is no service-role key, database password, private export or Auth credential in this configuration.
+| Item | Actual value |
+| --- | --- |
+| Project | inside-access-nayardt |
+| Project ID | b1758e10-ff03-4381-9eee-a669901cfef7 |
+| Account | 7f66ca1d65e8949f984b361f9f9b284b |
+| Git repository | private nayardt/inside-access |
+| Production branch | main |
+| Production automatic deployments | disabled |
+| Preview automatic deployments | none |
+| Deployments | 0 |
+| Latest / canonical deployment | null / null |
+| Build command | npm test && npm run verify:data && npm run build |
+| Build output | dist |
 
-- Production branch: main.
-- Build: npm test && npm run verify:data && npm run build.
-- Output: dist.
-- Production automatic deployments: disabled pending explicit owner approval.
-- Preview automatic deployments: none.
-- Proposed project name: inside-access-nayardt. No hostname has been provisioned or verified yet.
-- No D1 migration, paid Worker, domain purchase or new account is required.
+Both production and preview environment settings match the prepared [configuration](../ops/cloudflare-pages.json): Node 24, Supabase mode, the existing database URL and its modern browser-safe publishable key. No service-role key or database password was installed in the frontend configuration. The assigned subdomain is inside-access-nayardt.pages.dev; there is no deployed website at this stage.
 
-After the owner explicitly approves deployment and automatic updates, enable production deployments only; retain previews disabled unless explicitly needed. Every deploy then runs tests and reconciliation before building. Keep the manual GitHub deployment workflow disabled as a fallback to avoid two deployment systems. Do not ask the founder to download updates or use Terminal.
+[Machine-readable verification](cloudflare-project-verification.json) records the actual project GET and deployment-list results. No application code or database content was changed in this hosting step. No paid service was activated.
 
-## Actual blocker
+The API also returns the deprecated source.config.deployments_enabled flag as true. The current, granular controls were explicitly checked: production_deployments_enabled is false and preview_deployment_setting is none. These are the documented branch controls; do not mistake the deprecated flag for an active release.
 
-The Pages project creation request was rejected with HTTP 401, Cloudflare code 8000011: an internal issue with the Pages Git installation. Account identity and Pages listing still succeed; the connector reports Pages Write scope. This does not prove the GitHub app is absent, but the Git connection is not usable.
+## Updates after owner-approved cutover
 
-The owner must authorize/repair Cloudflare Workers & Pages access to **only** nayardt/inside-access through the official Git integration. Installing the ChatGPT GitHub connector does not give Cloudflare repository access. Do not create a Direct Upload project as a workaround: that would complicate the intended native Git integration.
+The native Cloudflare Git integration will handle updates from main when production deployments are enabled after approval. Every release must pass tests and data checks before the frontend build. Retain previews disabled unless required. Keep the manual GitHub deployment workflow disabled as a fallback to avoid two deployment systems. Everyday founder operation should require a browser, without downloading ZIPs or using Terminal.
 
-Official instructions: https://developers.cloudflare.com/pages/configuration/git-integration/github-integration/
-GitHub app: https://github.com/apps/cloudflare-workers-and-pages
+## Remaining readiness gates
 
-Stop before Save and Deploy. After authorization, retry the same disabled-deployment configuration once and inspect both the project and deployment list. If the same error remains, reconnect the Cloudflare connector as directed by its credential error; do not repeatedly retry or request a broad API token.
+1. Complete owner-controlled Auth password/email verification and app-admin membership; verify real login and nonadmin rejection. Do not enter or request passwords in chat.
+2. Connect hosted discovery triggering, image enrichment and backup execution, and verify restore. These currently have local-only execution paths and must not be described as fully operational on Pages.
+3. Perform hosted smoke tests and review the initial release with the owner.
+4. Obtain explicit deployment approval before creating any frontend deployment or enabling production automatic deployments.
 
-## Cost and readiness limits
+The Mac app remains the operational fallback until cutover checks pass. No new opportunity approval, publication decision or image approval was made by project setup.
 
-Static Pages asset requests are free under Cloudflare's current published pricing: https://developers.cloudflare.com/pages/functions/pricing/ . This request does not activate a paid subscription or any Functions. Account billing subscriptions could not be read because the OAuth connection has no Billing Read scope; no billing setting was changed and no additional billing credential is required for this preparation.
+## Previous blocker and recovery
 
-Owner Auth password/email verification and app-admin membership remain pending. Hosted discovery triggering, image enrichment and backup operations also require their private cloud execution path and restore verification; those local-only controls must not be described as fully functional on Pages. The Mac app remains the operational fallback until a complete hosted smoke test passes.
+The earlier Pages Git installation error (HTTP 401 / 8000011) was resolved after the owner's GitHub authorization and connection setup. A read-only repository configuration query subsequently returned HTTP 200 and detected npm and the actual build script. A later check-only turn did not authorize project creation; automatic review blocked that attempt. After the owner specifically approved the paused project, creation returned HTTP 200 and verification confirmed zero deployments.
 
-No Pages project or frontend deployment was created by this attempt. The imported database is unchanged.
+Remote-browser sign-in had separately failed with a website-surfaced HTTP 403. No further sign-in attempts, credential exposure or security bypass were used.
 
-## Build verification
+## Cost basis and limitations
 
-The frontend built successfully with the actual hosted Supabase URL and modern publishable key: TypeScript check passed, Vite transformed 70 modules, build completed in 1.09 seconds. The bundle was 509.53 kB (143.66 kB gzip); Vite emitted its nonfatal 500 kB chunk-size advisory. Configuration assertions passed: both automatic deployment types disabled, cloud mode selected and publishable key only. No source application changes were made in this stage; the preceding GitHub CI run passed 124 tests.
+Static Pages asset requests are free under Cloudflare's current pricing: https://developers.cloudflare.com/pages/functions/pricing/ . This setup adds no Functions, paid Workers, D1, domain purchase or paid subscription. Existing Supabase Free remains the database/Auth architecture. The validation target remains at or below €15/month; usage must stay within free quotas.
+
+Account subscriptions could not be inspected because this OAuth connection lacks Billing Read scope. No billing settings were changed; a broad billing token is not needed for this setup.
+
+The cloud-configured frontend already passed TypeScript and Vite production build: 70 modules, 509.53 kB JavaScript / 143.66 kB gzip, with a nonfatal bundle-size advisory. The preceding application CI passed 124 tests, data reconciliation and production build. No new application tests are claimed for this configuration-only step.

@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "project": {
+    "id": "b1758e10-ff03-4381-9eee-a669901cfef7",
+    "name": "inside-access-nayardt",
+    "subdomain": "inside-access-nayardt.pages.dev",
+    "repository": "nayardt/inside-access",
+    "production_branch": "main",
+    "production_deployments_enabled": false,
+    "preview_deployment_setting": "none",
+    "latest_deployment": null,
+    "canonical_deployment": null,
+    "build_config_matches": true,
+    "production_environment_matches": true,
+    "preview_environment_matches": true
+  },
+  "deployment_count": 0,
+  "deployments": [],
+  "checked_on": "2026-10-26",
+  "account_id": "7f66ca1d65e8949f984b361f9f9b284b",
+  "owner_approved": "Create inside-access-nayardt with deployment paused",
+  "paid_services_activated": false,
+  "application_code_changed": false
+}
